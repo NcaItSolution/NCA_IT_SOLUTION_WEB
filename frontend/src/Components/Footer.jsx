@@ -15,8 +15,8 @@ const Footer = () => {
                         <li>Terms & Conditions</li>
                     </ul>
                     <h4 className="mt-4 font-semibold">Call Us Today</h4>
-                    <p>USA +1 (872) 239-4605</p>
-                    <p>INDIA +91-9718340022</p>
+                    
+                    <p>INDIA +91 - 8287584509</p>
                     <p className="flex items-center mt-2">
                         <Mail className="w-4 h-4 mr-2" />
                         contact@ncaitsolution.com
@@ -29,18 +29,18 @@ const Footer = () => {
                         <li>Web Development</li>
                         <li>Mobile Apps</li>
                         <li><a href="Service.jsx">Services</a></li>
-                        <li>Healthcare Website & Digital Marketing</li>
+                        <li> Digital Marketing</li>
                     </ul>
                 </div>
 
                 <div>
                     <h3 className="text-xl font-bold mb-4">Contact Address</h3>
                     <p>
-                        <strong>Corp. Office:</strong> H 138, Ground Floor, H Block, Sector 63, Noida, UP-201301, India
+              <strong>Corp. Office:</strong> Office No. 705A, Iconic Corenthum Tower, 7th Floor, Sector-62, Noida, UP-201301, India.
                     </p>
-                    <p className="mt-4">
-                        <strong>USA:</strong> 1348 S FINLEY RD, Lombard, IL 60148 USA
-                    </p>
+
+                    
+                    
                 </div>
             </div>
 
