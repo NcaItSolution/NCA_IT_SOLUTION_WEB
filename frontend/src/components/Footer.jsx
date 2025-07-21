@@ -50,22 +50,7 @@ const Footer = () => {
                 <Instagram className="w-5 h-5 cursor-pointer hover:text-pink-500" />
             </div>
 
-            <div className="fixed bottom-5 right-5 flex flex-col items-end space-y-3">
-                <div className="bg-red-600 text-white px-4 py-2 rounded-full shadow-lg cursor-pointer">
-                    Have a Query?
-                </div>
-                <div className="bg-blue-600 text-white p-3 rounded-full shadow-lg cursor-pointer"></div>
-            </div>
-
-            <div className="fixed bottom-5 left-5">
-                <div className="bg-green-500 p-3 rounded-full shadow-lg cursor-pointer">
-                    <img
-                        src="http://upload.wikimedia.org/wikipedia/common/6/6b/whatsApp.svg"
-                        alt="whatsApp"
-                        className="w-6 h-6"
-                    />
-                </div>
-            </div>
+            
         </footer>
     );
 };
