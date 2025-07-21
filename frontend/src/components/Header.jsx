@@ -81,7 +81,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-gray-900 shadow-md w-full z-50 relative text-white">
+    <header className="bg-black shadow-md w-full z-50 relative text-white">
       <div className="max-w-screen-xl mx-auto px-4 py-3">
         <div className="flex flex-col gap-2">
           <div className="flex flex-wrap justify-between items-center gap-4">
