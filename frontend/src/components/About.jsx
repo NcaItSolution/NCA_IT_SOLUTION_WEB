@@ -113,7 +113,7 @@ const AutoScrollContainer = ({ children, speed = 0.7 }) => {
 };
 
 const AboutPage = () => (
-  <div className="min-h-screen bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+  <div className="min-h-screen bg-black text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
     <div className="max-w-7xl mx-auto space-y-20">
       {/* About Us */}
       <section className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-gray-800 rounded-lg p-8 md:p-12">

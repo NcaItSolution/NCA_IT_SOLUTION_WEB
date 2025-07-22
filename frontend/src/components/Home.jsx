@@ -334,16 +334,21 @@ const Home = () => {
           {/* Responsive grid instead of horizontal scroll */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
             {industries.map((industry, idx) => (
-              <div
+              <a
                 key={industry.id}
-                className="h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center p-4 sm:p-6 shadow-2xl hover:scale-105 group"
+                href="/industries"
+                className="block h-full focus:outline-none"
+                tabIndex={0}
+                aria-label={`Learn more about ${industry.name}`}
               >
-                <div className="text-3xl sm:text-5xl mb-2 sm:mb-4 group-hover:animate-bounce">{industry.icon}</div>
-                <h3 className="text-base sm:text-xl font-semibold text-cyan-400 text-center tracking-wide">
-                  {industry.name}
-                </h3>
-                <div className="w-8 h-1 sm:w-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2 sm:mt-3 group-hover:w-16 transition-all duration-300"></div>
-              </div>
+                <div className="h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center p-4 sm:p-6 shadow-2xl hover:scale-105 group">
+                  <div className="text-3xl sm:text-5xl mb-2 sm:mb-4 group-hover:animate-bounce">{industry.icon}</div>
+                  <h3 className="text-base sm:text-xl font-semibold text-cyan-400 text-center tracking-wide">
+                    {industry.name}
+                  </h3>
+                  <div className="w-8 h-1 sm:w-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2 sm:mt-3 group-hover:w-16 transition-all duration-300"></div>
+                </div>
+              </a>
             ))}
           </div>
           {/* Remove scroll buttons and dots */}
