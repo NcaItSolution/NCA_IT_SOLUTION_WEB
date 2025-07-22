@@ -331,64 +331,22 @@ const Home = () => {
               Delivering specialized solutions across diverse industries with deep domain expertise.
             </p>
           </div>
-          
-          <div className="relative max-w-full mx-auto">
-            <div className="flex items-center justify-center gap-2 sm:gap-4">
-              <button
-                onClick={prevIndustry}
-                className="flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm border border-white/10 text-cyan-400 hover:border-cyan-500/30 hover:scale-110 transition-all duration-300 shadow-lg z-10"
+          {/* Responsive grid instead of horizontal scroll */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+            {industries.map((industry, idx) => (
+              <div
+                key={industry.id}
+                className="h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center p-4 sm:p-6 shadow-2xl hover:scale-105 group"
               >
-                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-              </button>
-              
-              {/* Horizontal scroll for mobile */}
-              <div className="relative overflow-x-auto scrollbar-thin scrollbar-thumb-cyan-400 scrollbar-track-gray-800" style={{ width: '100%' }}>
-                <div
-                  className="flex transition-transform duration-500 ease-out gap-3 sm:gap-4"
-                  style={{
-                    transform: `translateX(-${activeIndustry * 260}px)`,
-                    minWidth: `${industries.length * 220}px`,
-                  }}
-                >
-                  {industries.map((industry, idx) => (
-                    <div
-                      key={industry.id}
-                      className="flex-shrink-0 w-44 h-48 sm:w-60 sm:h-64 transition-all duration-500"
-                    >
-                      <div className="h-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-3xl border border-white/10 hover:border-purple-500/30 transition-all duration-300 flex flex-col items-center justify-center p-4 sm:p-6 shadow-2xl hover:scale-105 group">
-                        <div className="text-3xl sm:text-5xl mb-2 sm:mb-4 group-hover:animate-bounce">{industry.icon}</div>
-                        <h3 className="text-base sm:text-xl font-semibold text-cyan-400 text-center tracking-wide">
-                          {industry.name}
-                        </h3>
-                        <div className="w-8 h-1 sm:w-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2 sm:mt-3 group-hover:w-16 transition-all duration-300"></div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <div className="text-3xl sm:text-5xl mb-2 sm:mb-4 group-hover:animate-bounce">{industry.icon}</div>
+                <h3 className="text-base sm:text-xl font-semibold text-cyan-400 text-center tracking-wide">
+                  {industry.name}
+                </h3>
+                <div className="w-8 h-1 sm:w-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mt-2 sm:mt-3 group-hover:w-16 transition-all duration-300"></div>
               </div>
-              
-              <button
-                onClick={nextIndustry}
-                className="flex items-center justify-center w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-gray-800/80 to-gray-700/80 backdrop-blur-sm border border-white/10 text-cyan-400 hover:border-cyan-500/30 hover:scale-110 transition-all duration-300 shadow-lg z-10"
-              >
-                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
-              </button>
-            </div>
-            
-            <div className="flex justify-center mt-6 sm:mt-8 gap-2 sm:gap-3">
-              {industries.map((_, idx) => (
-                <button
-                  key={idx}
-                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    activeIndustry === idx 
-                      ? 'bg-cyan-400 scale-125' 
-                      : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                  onClick={() => setActiveIndustry(idx)}
-                />
-              ))}
-            </div>
+            ))}
           </div>
+          {/* Remove scroll buttons and dots */}
         </div>
       </section>
 
