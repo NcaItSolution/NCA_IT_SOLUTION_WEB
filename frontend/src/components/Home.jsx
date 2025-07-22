@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BadgeDollarSign, UserRound, Lightbulb, ChevronLeft, ChevronRight } from "lucide-react";
+import { BadgeDollarSign, UserRound, Lightbulb, ChevronLeft, ChevronRight, Mail, User, MessageSquare, Send } from "lucide-react";
 
 const industries = [
   { id: 1, name: "Technology", icon: "💻" },
@@ -61,17 +61,35 @@ const Home = () => {
   const prevIndustry = () => {
     setActiveIndustry((prev) => (prev - 1 + industries.length) % industries.length);
   };
+  
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Your handle logic
+    alert("Message sent!");
+    setForm({ name: "", email: "", subject: "", message: "" });
+  };
 
   return (
     <div className="bg-black min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-800/10 to-cyan-800/10"></div>
+        <div className="absolute inset-0 bg-black from-purple-800/10 to-cyan-800/10"></div>
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto w-full">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
@@ -126,7 +144,7 @@ const Home = () => {
 
       {/* About Us Section */}
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-3 mb-6">
               <div className="w-3 h-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full"></div>
@@ -183,7 +201,7 @@ const Home = () => {
 
       {/* Our Vision Section */}
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl">
             <div className="text-center mb-16">
               <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
@@ -232,7 +250,7 @@ const Home = () => {
 
       {/* Our Services Section */}
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Our Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -305,7 +323,7 @@ const Home = () => {
 
       {/* Industries We Serve Section */}
       <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Industries We Serve</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -367,6 +385,124 @@ const Home = () => {
                   onClick={() => setActiveIndustry(idx)}
                 />
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+                Get In Touch
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                Ready to transform your business? Let's discuss your project and explore how we can help you achieve your goals.
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Name Field */}
+                  <div className="group">
+                    <label
+                      htmlFor="name"
+                      className="flex items-center gap-2 text-sm font-semibold text-cyan-400 mb-3 group-focus-within:text-purple-400 transition-colors duration-300"
+                    >
+                      <User className="w-4 h-4" />
+                      Full Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Enter your full name"
+                      required
+                      value={form.name}
+                      onChange={handleChange}
+                      className="w-full px-6 py-4 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 hover:border-cyan-500/30"
+                    />
+                  </div>
+                  
+                  {/* Email Field */}
+                  <div className="group">
+                    <label
+                      htmlFor="email"
+                      className="flex items-center gap-2 text-sm font-semibold text-cyan-400 mb-3 group-focus-within:text-purple-400 transition-colors duration-300"
+                    >
+                      <Mail className="w-4 h-4" />
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="your.email@example.com"
+                      required
+                      value={form.email}
+                      onChange={handleChange}
+                      className="w-full px-6 py-4 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 hover:border-cyan-500/30"
+                    />
+                  </div>
+                </div>
+                
+                {/* Subject Field */}
+                <div className="group">
+                  <label
+                    htmlFor="subject"
+                    className="flex items-center gap-2 text-sm font-semibold text-cyan-400 mb-3 group-focus-within:text-purple-400 transition-colors duration-300"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Subject
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    placeholder="What can we help you with?"
+                    required
+                    value={form.subject}
+                    onChange={handleChange}
+                    className="w-full px-6 py-4 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 hover:border-cyan-500/30"
+                  />
+                </div>
+                
+                {/* Message Field */}
+                <div className="group">
+                  <label
+                    htmlFor="message"
+                    className="flex items-center gap-2 text-sm font-semibold text-cyan-400 mb-3 group-focus-within:text-purple-400 transition-colors duration-300"
+                  >
+                    <MessageSquare className="w-4 h-4" />
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell us about your project, goals, and how we can help..."
+                    required
+                    value={form.message}
+                    onChange={handleChange}
+                    rows={6}
+                    className="w-full px-6 py-4 rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 hover:border-cyan-500/30 resize-vertical min-h-[150px]"
+                  />
+                </div>
+                
+                {/* Submit Button */}
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="group inline-flex items-center gap-3 px-12 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold text-white shadow-xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-cyan-700"
+                  >
+                    <span className="relative z-10">Send Message</span>
+                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
