@@ -80,6 +80,13 @@ const Home = () => {
     setForm({ name: "", email: "", subject: "", message: "" });
   };
 
+  const handleScrollToContact = () => {
+    const el = document.getElementById('contact-section');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="bg-black min-h-screen">
       {/* Hero Section */}
@@ -111,7 +118,10 @@ const Home = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                  <button className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
+                  <button
+                    className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold text-white shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
+                    onClick={handleScrollToContact}
+                  >
                     <span className="relative z-10">Get Started Today</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
@@ -383,7 +393,7 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8">
+      <section id="contact-section" className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-8 lg:p-16 shadow-2xl">
             <div className="text-center mb-10 sm:mb-16">
