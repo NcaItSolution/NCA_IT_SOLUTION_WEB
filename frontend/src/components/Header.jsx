@@ -1,131 +1,119 @@
-import { useState } from 'react';
 import {
-  FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaBars,
+  FaPhone,
 } from 'react-icons/fa';
-import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+const navItems = [
+  { name: 'ABOUT', link: '/about' },
+  {
+    name: 'SERVICES',
+    link: '/services',
+    submenu: [
+      {
+        category: 'Customized Web & Mobile Application',
+        items: [
+          { label: 'Web Application Development', link: '/services/web-app' },
+          { label: 'Database Design & Development', link: '/services/database' },
+          { label: 'E-Commerce Solutions', link: '/services/ecommerce' },
+          { label: 'Content Management Systems', link: '/services/cms' },
+          { label: 'Mobile Application Development', link: '/services/mobile-app' },
+          { label: 'Maintenance & Support Services', link: '/services/support' },
+          { label: 'Android App Development', link: '/services/android' },
+          { label: 'IOS/IPhone App Development', link: '/services/ios' },
+        ],
+      },
+      {
+        category: 'Cloud & VPS Hosting Solutions',
+        items: [
+          { label: 'Shared Hosting Solution', link: '/services/shared-hosting' },
+          { label: 'VPS Server/Hosting Solution', link: '/services/vps-hosting' },
+          { label: 'Dedicated Server Hosting Solution', link: '/services/dedicated-hosting' },
+          { label: 'Cloud Server Solutions', link: '/services/cloud' },
+          { label: 'AWS/Azure Solutions', link: '/services/aws-azure' },
+          { label: 'IVR Solution', link: '/services/ivr' },
+        ],
+      },
+    ],
+  },
+  { name: 'INDUSTRIES', link: '/industries' },
+  { name: 'CAREERS', link: '/careers' },
+  { name: 'BLOG', link: '/blog' },
+  { name: 'CONTACT US', link: '/contact' },
+];
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-
-  const navItems = [
-    {
-      name: 'ABOUT',
-      submenu: ['Our Company', 'Our Team', 'Why Us?']
-    },
-    {
-      name: 'SERVICES',
-      submenu: [
-        {
-          category: 'Customized Web & Mobile Application',
-          items: [
-            'Web Application Development',
-            'Database Design & Development',
-            'E-Commerce Solutions',
-            'Content Management Systems',
-            'Mobile Application Development',
-            'Maintenance & Support Services',
-            'Android App Development',
-            'IOS/IPhone App Development'
-          ]
-        },
-        {
-          category: 'Digital Marketing',
-          items: [
-            'Search Engine Optimization',
-            'Digital Marketing',
-            'Pay Per Click Campaigns',
-            'Social Media Promotion',
-            'Bulk SMS, Whatsapp & Email Solutions',
-            'Business Email Solutions',
-            'Multimedia Solutions',
-            'Creative Content Writing'
-          ]
-        },
-        {
-          category: 'Cloud & VPS Hosting Solutions',
-          items: [
-            'Shared Hosting Solution',
-            'VPS Server/Hosting Solution',
-            'Dedicated Server Hosting Solution',
-            'Cloud Server Solutions',
-            'AWS/Azure Solutions',
-            'IVR Solution'
-          ]
-        },
-        {
-          category: 'Event & Media Solutions',
-          items: [
-            'Creative Content Creation',
-            'Live Streaming On Social Media',
-            'PR Articles And Media Solutions'
-          ]
-        }
-      ]
-    },
-    {
-      name: 'PORTFOLIOS',
-      submenu: ['Websites', 'Apps', 'Graphics']
-    },
-    {
-      name: 'INDUSTRIES',
-      submenu: ['Healthcare', 'Education', 'Retail']
-    },
-    {
-      name: 'CAREERS',
-      submenu: ['Openings', 'Internships']
-    },
-    { name: 'BLOG' },
-    { name: 'CONTACT US' }
-  ];
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   return (
-    <header className="bg-black shadow-md w-full z-50 relative text-white">
-      <div className="max-w-screen-xl mx-auto px-4 py-3">
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap justify-between items-center gap-4">
-            <div className="flex items-center gap-4">
-              {/* Logo Removed */}
-              <div>
-                <h1 className="text-xl font-bold text-red-400 cursor-pointer">NCA IT SOLUTION</h1>
-                <p className="text-sm italic text-gray-300">We Create A Difference</p>
-                <p className="text-xs text-gray-400">DESIGN | DEVELOPMENT | BRANDING</p>
-              </div>
-            </div>
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-200">
-              <div className="flex items-center gap-2">
-                <MdEmail className="text-red-400" />
-                <span>contact@ncaitsolutions.com</span>
-              </div>
-              <span>USA: +1 (872)239-4605</span>
-              <span>INDIA: +91-9718340022</span>
-              <div className="flex gap-2 text-red-400 text-lg">
-                <FaFacebookF />
-                <FaInstagram />
-                <FaLinkedinIn />
-                <FaYoutube />
-              </div>
-            </div>
+    <header className="bg-black text-white w-full shadow-md z-50">
+      <div className="w-[85%] max-w-[1600px] mx-auto px-5 pt-5 pb-2">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+          {/* Logo + Hamburger */}
+          <div className="flex items-start justify-between w-full lg:w-auto">
+            <Link to="/" className="block">
+              <h1 className="text-xl lg:text-3xl font-bold">NCA IT SOLUTION</h1>
+              <p className="italic text-sm text-gray-300">We Create a Difference</p>
+              <p className="text-xs text-gray-400">
+                DESIGN | DEVELOPMENT | BRANDING
+              </p>
+            </Link>
+
+            {/* Mobile Hamburger */}
+            <button
+              onClick={() => {
+                setMobileMenuOpen((prev) => !prev);
+                setMobileServicesOpen(false);
+              }}
+              className="lg:hidden text-2xl text-white"
+            >
+              <FaBars />
+            </button>
           </div>
 
-          {/* Navigation */}
-          <nav className="md:flex bg-gray-800 w-full pl-0 md:pl-[215px]">
-            <ul className="flex flex-col md:flex-row md:items-center md:gap-6 py-2">
-              {navItems.map((item, index) => (
-                <li
-                  key={index}
-                  className="relative group px-4 py-2"
-                  onMouseEnter={() => item.name === 'SERVICES' && setServicesOpen(true)}
-                  onMouseLeave={() => item.name === 'SERVICES' && setServicesOpen(false)}
-                >
-                  <button className="font-semibold text-white hover:text-red-400 focus:outline-none">
-                    {item.name}
-                  </button>
+          {/* Desktop Contact + Nav */}
+          <div className="hidden lg:flex flex-col items-end w-full max-w-[70%]">
+            <div className="flex items-center justify-end flex-wrap gap-x-4 text-sm mb-1">
+              <MdEmail className="text-red-400" />
+              <span>contact@ncaitsolutions.com</span>
+              <span>+1 (872) 239-4605</span>
+              <span>+91-9718340022</span>
+              <div className="flex gap-3 text-red-400 text-lg ml-2">
+                <FaFacebookF className="cursor-pointer" />
+                <FaInstagram className="cursor-pointer" />
+                <FaLinkedinIn className="cursor-pointer" />
+                <FaYoutube className="cursor-pointer" />
+              </div>
+            </div>
 
-                  {/* SERVICES mega menu */}
-                  {item.name === 'SERVICES' && servicesOpen && (
-                    <div className="absolute top-full left-0 bg-gray-900 shadow-xl z-50 w-[1000px] grid grid-cols-4 p-6 gap-6 text-sm">
+            {/* Nav */}
+            <ul className="flex gap-6 text-base font-semibold justify-end flex-wrap">
+              {navItems.map((item, idx) => (
+                <li
+                  key={idx}
+                  className="relative group"
+                  onMouseEnter={() =>
+                    item.name === 'SERVICES' && setDesktopServicesOpen(true)
+                  }
+                  onMouseLeave={() =>
+                    item.name === 'SERVICES' && setDesktopServicesOpen(false)
+                  }
+                >
+                  <Link to={item.link} className="hover:text-red-400">
+                    {item.name}
+                  </Link>
+
+                  {/* Desktop SERVICES Dropdown */}
+                  {item.name === 'SERVICES' && desktopServicesOpen && (
+                    <div className="absolute left-0 top-full bg-gray-900 shadow-xl z-50 w-screen max-w-xl grid grid-cols-1 md:grid-cols-2 p-6 gap-6 text-sm">
                       {item.submenu.map((section, sIdx) => (
                         <div key={sIdx}>
                           <h4 className="font-semibold text-blue-300 mb-2">
@@ -133,8 +121,13 @@ const Header = () => {
                           </h4>
                           <ul className="space-y-1 text-gray-200">
                             {section.items.map((subItem, i) => (
-                              <li key={i} className="hover:underline cursor-pointer">
-                                {subItem}
+                              <li key={i}>
+                                <Link
+                                  to={subItem.link}
+                                  className="hover:underline cursor-pointer truncate"
+                                >
+                                  {subItem.label}
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -142,33 +135,84 @@ const Header = () => {
                       ))}
                     </div>
                   )}
-
-                  {/* Simple submenu */}
-                  {item.submenu && item.name !== 'SERVICES' && (
-                    <ul className="absolute top-full left-0 bg-gray-900 shadow-lg z-50 w-64 text-sm hidden group-hover:block transition-all duration-200">
-                      {item.submenu.map((subItem, i) => (
-                        <li
-                          key={i}
-                          className="hover:bg-gray-700 text-gray-200 px-4 py-2"
-                        >
-                          {subItem}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </li>
               ))}
             </ul>
-          </nav>
+          </div>
         </div>
+
+        {/* Mobile Contact Row */}
+        <div className="lg:hidden mt-4 flex justify-between items-center text-red-400 text-xl">
+          <div className="flex gap-4">
+            <MdEmail title="Email" />
+            <FaPhone title="Phone" />
+          </div>
+          <div className="flex gap-3">
+            <FaFacebookF className="cursor-pointer" />
+            <FaInstagram className="cursor-pointer" />
+            <FaLinkedinIn className="cursor-pointer" />
+            <FaYoutube className="cursor-pointer" />
+          </div>
+        </div>
+
+        {/* Mobile Nav */}
+        {mobileMenuOpen && (
+          <ul className="lg:hidden mt-4 bg-gray-800 rounded-md p-4 space-y-2 text-sm">
+            {navItems.map((item, idx) => (
+              <li key={idx}>
+                {item.name === 'SERVICES' ? (
+                  <>
+                    <button
+                      className="w-full text-left font-medium hover:text-red-400 flex items-center justify-between"
+                      onClick={() => setMobileServicesOpen((prev) => !prev)}
+                    >
+                      {item.name}
+                      <span className="ml-2">
+                        {mobileServicesOpen ? '▲' : '▼'}
+                      </span>
+                    </button>
+                    {/* Mobile SERVICES Dropdown */}
+                    {mobileServicesOpen && (
+                      <div className="mt-2 ml-2 bg-gray-700 rounded-md p-3 space-y-3">
+                        {item.submenu.map((section, sIdx) => (
+                          <div key={sIdx}>
+                            <h4 className="text-blue-300 font-semibold mb-1">
+                              {section.category}
+                            </h4>
+                            <ul className="text-gray-200 space-y-1">
+                              {section.items.map((subItem, i) => (
+                                <li key={i}>
+                                  <Link
+                                    to={subItem.link}
+                                    className="hover:underline cursor-pointer"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={item.link}
+                    className="block font-medium hover:text-red-400"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </header>
   );
 };
 
 export default Header;
-
-
-
-
-
