@@ -67,103 +67,6 @@ const TeamCard = ({ name, role, image }) => (
     </div>
   </div>
 );
-<<<<<<< HEAD
-
-const AutoScrollContainer = ({ children, speed = 0.7 }) => {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
-
-    if (container.children.length > 0) {
-      const childrenArr = Array.from(container.children);
-      childrenArr.forEach((child) => {
-        const clone = child.cloneNode(true);
-        container.appendChild(clone);
-      });
-    }
-
-    let animationFrameId;
-    let scrollX = 0;
-
-    const step = () => {
-      scrollX += speed;
-      if (scrollX >= container.scrollWidth / 2) {
-        scrollX = 0;
-      }
-      container.scrollLeft = scrollX;
-      animationFrameId = requestAnimationFrame(step);
-    };
-
-    animationFrameId = requestAnimationFrame(step);
-
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [speed]);
-
-  return (
-    <div
-      ref={containerRef}
-      className="flex space-x-6 overflow-x-hidden select-none cursor-default scrollbar-hide"
-    >
-      {children}
-    </div>
-  );
-};
-
-const AboutPage = () => (
-  <div className="min-h-screen bg-gray-900 text-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-7xl mx-auto space-y-20">
-      {/* About Us */}
-      <section className="flex flex-col md:flex-row items-center md:items-start gap-8 bg-gray-800 rounded-lg p-8 md:p-12">
-        <img
-          src={aboutUsImage}
-          alt="About Us"
-          className="w-full max-w-[400px] h-auto md:w-[400px] md:h-[300px] rounded-lg object-cover"
-        />
-        <div className="md:w-3/5">
-          <h2 className="text-3xl font-bold mb-4">About Us</h2>
-          <p className="text-gray-300 leading-relaxed">
-            At NCA IT Solution, we are dedicated to transforming ideas into innovative software solutions and empowering individuals with essential IT skills. Established with a passion for excellence, we specialize in bespoke software development and comprehensive IT training services.
-            <br />
-            Our team of seasoned developers combines technical expertise with creativity to deliver tailored software solutions that meet the unique needs of our clients. From conceptualization to deployment, we ensure precision and efficiency in every project, leveraging cutting-edge technologies to drive business growth and success.
-          </p>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6">Why Choose Us</h2>
-        <AutoScrollContainer speed={0.7}>
-          {whyCards.map((card, idx) => (
-            <Card key={`why-${idx}`} title={card.title} desc={card.desc} />
-          ))}
-        </AutoScrollContainer>
-      </section>
-
-      {/* Our Team */}
-      <section>
-        <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
-        <AutoScrollContainer speed={0.5}>
-          {teamCards.map((member, idx) => (
-            <TeamCard
-              key={`team-${idx}`}
-              name={member.name}
-              role={member.role}
-              image={member.image}
-            />
-          ))}
-        </AutoScrollContainer>
-      </section>
-    </div>
-  </div>
-);
-
-export default AboutPage;
-
-=======
 
 const AutoScrollContainer = ({ children, speed = 0.7 }) => {
   const containerRef = useRef(null);
@@ -258,4 +161,3 @@ const AboutPage = () => (
 );
 
 export default AboutPage;
->>>>>>> 66e5fdaa05c91692368660f5bace54da9283fd80
