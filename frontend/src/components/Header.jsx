@@ -43,7 +43,7 @@ const navItems = [
     ],
   },
   { name: 'INDUSTRIES', link: '/industries' },
-  { name: 'CAREERS', link: '/careers' },
+  { name: 'CAREERS', link: '/career' },
   { name: 'BLOG', link: '/blog' },
   { name: 'CONTACT US', link: '/contact' },
 ];
