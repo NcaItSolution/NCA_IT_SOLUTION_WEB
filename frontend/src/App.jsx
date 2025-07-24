@@ -7,6 +7,7 @@ import About from "./components/About";
 import Industries from "./components/Industries";
 import Blogs from "./components/Blogs";
 import CareersPage from "./components/CareersPage";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/industries" element= {<Industries/>} ></Route>
       <Route path="/blog" element= {<Blogs/>} ></Route>
       <Route path="/career" element={<CareersPage/>}/>
+      <Route path="/contact" element={<Contact/>}/>
         
       </Routes>
       <Footer/>
