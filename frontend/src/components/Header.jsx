@@ -60,11 +60,14 @@ const Header = () => {
           {/* Logo + Hamburger */}
           <div className="flex items-start justify-between w-full lg:w-auto">
             <Link to="/" className="block">
+            <div className="flex items-center space-x-4">
+              <img src="../../Public/img/logo.png" alt="logo" className='w-20 h-20'/>
               <h1 className="text-xl lg:text-3xl font-bold">NCA IT SOLUTION</h1>
-              <p className="italic text-sm text-gray-300">We Create a Difference</p>
+              </div>
+              {/* <p className="italic text-sm text-gray-300">We Create a Difference</p>
               <p className="text-xs text-gray-400">
                 DESIGN | DEVELOPMENT | BRANDING
-              </p>
+              </p>   */}
             </Link>
 
             {/* Mobile Hamburger */}
