@@ -14,7 +14,6 @@ const navItems = [
   { name: 'ABOUT', link: '/about' },
   {
     name: 'SERVICES',
-    link: '/services',
     submenu: [
       {
         category: 'Customized Web & Mobile Application',
@@ -34,7 +33,6 @@ const navItems = [
         items: [
           { label: 'Shared Hosting Solution', link: '/services/shared-hosting' },
           { label: 'VPS Server/Hosting Solution', link: '/services/vps-hosting' },
-          { label: 'Dedicated Server Hosting Solution', link: '/services/dedicated-hosting' },
           { label: 'Cloud Server Solutions', link: '/services/cloud' },
           { label: 'AWS/Azure Solutions', link: '/services/aws-azure' },
           { label: 'IVR Solution', link: '/services/ivr' },
