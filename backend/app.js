@@ -1,15 +1,15 @@
-// External Module
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const cors = require("cors");
+const express=require('express')
+const app=express()
+require('dotenv').config()
+const database=require('./utils/Database.js')
+const userRouter=require('./router/userRouter.js')
 
+database()
+app.use(express.json())
 
+app.use('/api/user',userRouter)
+app.use('/',(req,res)=>{
+    res.send('hwllo world')
+})
 
-const app = express();
-
-const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => {
-    console.log('Hello');
-    console.log(`Server running at: http://localhost:${PORT}`);
-  });
+module.exports=app
