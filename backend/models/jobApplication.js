@@ -24,4 +24,4 @@ const jobApplication=new Schema({
 },{timestamps:true})
 
 
-module.exports=mongoose.model('User',jobApplication)
+module.exports=mongoose.model('Application',jobApplication)

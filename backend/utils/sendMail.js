@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
+const fs = require('fs');
 
 const sendEmail = async ({ fullName, emailAddress, phoneNumber, coverLetter, resumePath }) => {
   const transporter = nodemailer.createTransport({
@@ -15,7 +16,7 @@ const sendEmail = async ({ fullName, emailAddress, phoneNumber, coverLetter, res
   const mailOptions = {
     from:emailAddress, // Sender email
     to: process.env.SMTP_FROM_EMAIL, // HR email
-    subject: 'New Job Application - UI/UX Designer',
+    subject: 'New Job Application',
     text: `
       A new job application has been submitted.
 
@@ -33,6 +34,11 @@ const sendEmail = async ({ fullName, emailAddress, phoneNumber, coverLetter, res
   };
 
   await transporter.sendMail(mailOptions);
+
+  // Remove the resume file after successful email send
+  fs.unlink(resumePath, (err) => {
+    // Ignore error if file is already deleted or missing
+  });
 };
 
 module.exports = sendEmail;
