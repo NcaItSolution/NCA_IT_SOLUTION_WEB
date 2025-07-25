@@ -22,6 +22,7 @@ import CloudServer from "./components/Services/CloudServer";
 import AwsAzure from "./components/Services/AwsAzure";
 import IvrSol from "./components/Services/IvrSol";
 import ScrollToTop from "./components/ScrollToTop";
+import SampleBlog from "./components/SampleBlog";
 
 function App() {
   return (
@@ -49,6 +50,8 @@ function App() {
       <Route path="/services/cloud" element={<CloudServer/>}/>
       <Route path="/services/aws-azure" element={<AwsAzure/>}/>
       <Route path="/services/ivr" element={<IvrSol/>}/>
+      {/* Sample Blogs Routes */}
+      <Route path="/blogs" element={<SampleBlog/>}/>
 
 
       

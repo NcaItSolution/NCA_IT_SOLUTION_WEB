@@ -1,8 +1,6 @@
 import {
-  FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
   FaBars,
   FaPhone,
 } from 'react-icons/fa';
@@ -51,6 +49,9 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
+  const linkedInUrl = 'https://www.linkedin.com/in/nca-it-solution-aa3515375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app';
+  const instagramUrl = 'https://www.instagram.com/ncaitsolution_noida?igsh=ODgxY2lqa2JtYmN1';
+
   return (
     <header className="bg-black text-white w-full shadow-md z-50">
       <div className="w-[85%] max-w-[1600px] mx-auto px-5 pt-5 pb-2">
@@ -58,14 +59,10 @@ const Header = () => {
           {/* Logo + Hamburger */}
           <div className="flex items-start justify-between w-full lg:w-auto">
             <Link to="/" className="block">
-            <div className="flex items-center space-x-4">
-              <img src="../../Public/img/logo.png" alt="logo" className='w-20 h-20'/>
-              <h1 className="text-xl lg:text-3xl font-bold">NCA IT SOLUTION</h1>
+              <div className="flex items-center space-x-4">
+                <img src="../../Public/img/logo.png" alt="logo" className="w-20 h-20" />
+                <h1 className="text-xl lg:text-3xl font-bold">NCA IT SOLUTION</h1>
               </div>
-              {/* <p className="italic text-sm text-gray-300">We Create a Difference</p>
-              <p className="text-xs text-gray-400">
-                DESIGN | DEVELOPMENT | BRANDING
-              </p>   */}
             </Link>
 
             {/* Mobile Hamburger */}
@@ -75,6 +72,7 @@ const Header = () => {
                 setMobileServicesOpen(false);
               }}
               className="lg:hidden text-2xl text-white"
+              aria-label="Toggle menu"
             >
               <FaBars />
             </button>
@@ -84,14 +82,27 @@ const Header = () => {
           <div className="hidden lg:flex flex-col items-end w-full max-w-[70%]">
             <div className="flex items-center justify-end flex-wrap gap-x-4 text-sm mb-1">
               <MdEmail className="text-red-400" />
-              <span>contact@ncaitsolutions.com</span>
-              <span>+1 (872) 239-4605</span>
-              <span>+91-9718340022</span>
-              <div className="flex gap-3 text-red-400 text-lg ml-2">
-                <FaFacebookF className="cursor-pointer" />
-                <FaInstagram className="cursor-pointer" />
-                <FaLinkedinIn className="cursor-pointer" />
-                <FaYoutube className="cursor-pointer" />
+              <span>ncaitsolution90@gmail.com</span>
+              <span>+91 8287584509</span>
+              <div className="flex gap-4 text-red-400 text-xl ml-4">
+                <a
+                  href={linkedInUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="hover:text-blue-500 transition-colors"
+                >
+                  <FaLinkedinIn className="cursor-pointer" />
+                </a>
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="hover:text-pink-500 transition-colors"
+                >
+                  <FaInstagram className="cursor-pointer" />
+                </a>
               </div>
             </div>
 
@@ -149,10 +160,24 @@ const Header = () => {
             <FaPhone title="Phone" />
           </div>
           <div className="flex gap-3">
-            <FaFacebookF className="cursor-pointer" />
-            <FaInstagram className="cursor-pointer" />
-            <FaLinkedinIn className="cursor-pointer" />
-            <FaYoutube className="cursor-pointer" />
+            <a
+              href={linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="hover:text-blue-500 transition-colors"
+            >
+              <FaLinkedinIn className="cursor-pointer" />
+            </a>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="hover:text-pink-500 transition-colors"
+            >
+              <FaInstagram className="cursor-pointer" />
+            </a>
           </div>
         </div>
 
