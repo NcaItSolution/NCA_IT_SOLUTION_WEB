@@ -75,6 +75,8 @@ const Home = () => {
 
   const [currentServicePage, setCurrentServicePage] = useState(0);
   const [activeIndustry, setActiveIndustry] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const [message, setMessage] = useState(null);
 
   const servicesPerPage = 3;
   const totalServicePages = Math.ceil(services.length / servicesPerPage);
@@ -88,7 +90,9 @@ const Home = () => {
   };
 
   const prevIndustry = () => {
-    setActiveIndustry((prev) => (prev - 1 + industries.length) % industries.length);
+    setActiveIndustry(
+      (prev) => (prev - 1 + industries.length) % industries.length
+    );
   };
 
   const [form, setForm] = useState({
@@ -102,11 +106,56 @@ const Home = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Your handle logic here
-    alert("Message sent!");
-    setForm({ name: "", email: "", subject: "", message: "" });
+    setSubmitting(true);
+    setMessage(null);
+    try {
+      const response = await fetch(
+        "http://localhost:1234/api/user/send-message",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName: form.name,
+            emailAddress: form.email,
+            subject: form.subject,
+            message: form.message,
+          }),
+        }
+      );
+      if (response.ok) {
+        setMessage({
+          type: "success",
+          text: "Message sent successfully!",
+        });
+        setForm({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        setTimeout(() => {
+          setSubmitting(false);
+          setMessage(null);
+        }, 3000);
+      } else {
+        const data = await response.json();
+        setMessage({
+          type: "error",
+          text: data.error || "Failed to send message.",
+        });
+        setSubmitting(false);
+      }
+    } catch (err) {
+      setMessage({
+        type: "error",
+        text: "An error occurred. Please try again.",
+      });
+      setSubmitting(false);
+    }
   };
 
   const handleScrollToContact = () => {
@@ -144,9 +193,9 @@ const Home = () => {
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Transform your business with cutting-edge technology solutions. We
-                  deliver innovative, scalable, and secure applications that drive
-                  growth and success.
+                  Transform your business with cutting-edge technology
+                  solutions. We deliver innovative, scalable, and secure
+                  applications that drive growth and success.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
@@ -157,11 +206,11 @@ const Home = () => {
                     <span className="relative z-10">Get Started Today</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
-                  <Link to = '/about'>
-
-                  <button className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 rounded-full font-semibold text-white hover:bg-white/5 transition-all duration-300 backdrop-blur-sm">
-                    Learn More
-                  </button> </Link>
+                  <Link to="/about">
+                    <button className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 rounded-full font-semibold text-white hover:bg-white/5 transition-all duration-300 backdrop-blur-sm">
+                      Learn More
+                    </button>{" "}
+                  </Link>
                 </div>
               </div>
 
@@ -301,8 +350,12 @@ const Home = () => {
                           strokeWidth={1.5}
                         />
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2 sm:mb-4">{item.title}</h3>
-                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{item.description}</p>
+                      <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-2 sm:mb-4">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -316,9 +369,12 @@ const Home = () => {
       <section className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Our Services</h2>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+              Our Services
+            </h2>
             <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive solutions tailored to meet your unique business challenges and objectives.
+              Comprehensive solutions tailored to meet your unique business
+              challenges and objectives.
             </p>
           </div>
 
@@ -361,7 +417,9 @@ const Home = () => {
           {/* Pagination */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
             <button
-              onClick={() => setCurrentServicePage((prev) => Math.max(prev - 1, 0))}
+              onClick={() =>
+                setCurrentServicePage((prev) => Math.max(prev - 1, 0))
+              }
               disabled={currentServicePage === 0}
               className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border border-cyan-500/30 rounded-full text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
             >
@@ -375,14 +433,20 @@ const Home = () => {
                   key={i}
                   onClick={() => setCurrentServicePage(i)}
                   className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    currentServicePage === i ? "bg-cyan-400 scale-125" : "bg-gray-600 hover:bg-gray-500"
+                    currentServicePage === i
+                      ? "bg-cyan-400 scale-125"
+                      : "bg-gray-600 hover:bg-gray-500"
                   }`}
                 />
               ))}
             </div>
 
             <button
-              onClick={() => setCurrentServicePage((prev) => Math.min(prev + 1, totalServicePages - 1))}
+              onClick={() =>
+                setCurrentServicePage((prev) =>
+                  Math.min(prev + 1, totalServicePages - 1)
+                )
+              }
               disabled={currentServicePage === totalServicePages - 1}
               className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 border border-cyan-500/30 rounded-full text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed backdrop-blur-sm"
             >
@@ -397,9 +461,12 @@ const Home = () => {
       <section className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">Industries We Serve</h2>
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+              Industries We Serve
+            </h2>
             <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Delivering specialized solutions across diverse industries with deep domain expertise.
+              Delivering specialized solutions across diverse industries with
+              deep domain expertise.
             </p>
           </div>
           {/* Responsive grid */}
@@ -428,7 +495,10 @@ const Home = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-section" className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8">
+      <section
+        id="contact-section"
+        className="py-12 sm:py-20 lg:py-32 px-2 sm:px-4 md:px-8"
+      >
         <div className="max-w-7xl mx-auto w-full">
           <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-8 lg:p-16 shadow-2xl">
             <div className="text-center mb-10 sm:mb-16">
@@ -436,7 +506,8 @@ const Home = () => {
                 Get In Touch
               </h2>
               <p className="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Ready to transform your business? Let's discuss your project and explore how we can help you achieve your goals.
+                Ready to transform your business? Let's discuss your project and
+                explore how we can help you achieve your goals.
               </p>
             </div>
 
@@ -528,13 +599,27 @@ const Home = () => {
                   />
                 </div>
 
+                {/* Message Display */}
+                {message && (
+                  <div className="text-center">
+                    <p className={`font-medium ${
+                      message.type === "success" ? "text-green-400" : "text-red-400"
+                    }`}>
+                      {message.text}
+                    </p>
+                  </div>
+                )}
+
                 {/* Submit Button */}
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="group relative inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold text-white shadow-xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-cyan-700"
+                    disabled={submitting}
+                    className="group relative inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full font-semibold text-white shadow-xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-cyan-700 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    <span className="relative z-10">Send Message</span>
+                    <span className="relative z-10">
+                      {submitting ? "Sending..." : "Send Message"}
+                    </span>
                     <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>

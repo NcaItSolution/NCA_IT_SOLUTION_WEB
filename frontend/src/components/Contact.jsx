@@ -17,6 +17,7 @@ const Contact = () => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState(""); // "SUCCESS", "ERROR", or ""
+  const [submitting, setSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -34,7 +35,7 @@ const Contact = () => {
     return tempErr;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const fieldErrors = validate();
     if (Object.keys(fieldErrors).length) {
@@ -42,10 +43,39 @@ const Contact = () => {
       setStatus("");
       return;
     }
-    // Simulate sending...
-    setStatus("SUCCESS");
-    setForm(initialForm);
-    setErrors({});
+
+    setSubmitting(true);
+    setStatus("");
+
+    try {
+      const response = await fetch("http://localhost:1234/api/user/send-message", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fullName: form.name,
+          emailAddress: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("SUCCESS");
+        setForm(initialForm);
+        setErrors({});
+      } else {
+        const data = await response.json();
+        setStatus("ERROR");
+        console.error("Error:", data.error || "Failed to send message");
+      }
+    } catch (error) {
+      setStatus("ERROR");
+      console.error("Network error:", error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -185,9 +215,12 @@ const Contact = () => {
                 <div className="text-center">
                   <button
                     type="submit"
-                    className="group relative inline-flex items-center gap-2 px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full font-semibold text-white shadow-xl hover:shadow-purple-500/30 transition-all duration-200 hover:scale-105 hover:from-purple-800 hover:to-cyan-800"
+                    disabled={submitting}
+                    className="group relative inline-flex items-center gap-2 px-8 sm:px-12 py-3 sm:py-4 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full font-semibold text-white shadow-xl hover:shadow-purple-500/30 transition-all duration-200 hover:scale-105 hover:from-purple-800 hover:to-cyan-800 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    <span className="relative z-10">Send Message</span>
+                    <span className="relative z-10">
+                      {submitting ? "Sending..." : "Send Message"}
+                    </span>
                     {/* <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> */}
                   </button>
                 </div>
