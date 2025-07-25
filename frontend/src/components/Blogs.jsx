@@ -6,73 +6,73 @@ const blogs = [
     title: "Next.js 14 Released",
     summary: "A look at the groundbreaking features in Next.js 14.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "AI Trends in 2025",
     summary: "How AI is changing the landscape for developers.",
     image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "WebAssembly for JavaScript Devs",
     summary: "Speed up your apps with modern WebAssembly techniques.",
     image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "State of CSS 2025",
     summary: "The new utility classes and best practices in CSS.",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "React Server Components",
     summary: "Decoding RSC and its impact on modern web.",
     image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "Rust for Node.js Developers",
     summary: "Bringing performance and safety to JS stacks.",
     image: "https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "Cloud-Native DevOps",
     summary: "Best practices for deploying apps at scale.",
     image: "https://images.unsplash.com/photo-1467987506553-8f3916508521?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "Quantum Computing Basics",
     summary: "How quantum algorithms could change cryptography.",
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "TypeScript in 2025",
     summary: "Advanced types & tools for safer JavaScript.",
     image: "https://images.unsplash.com/photo-1522202195461-5addfbf2ff6f?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "The Rise of Edge Computing",
     summary: "Processing data closer to the source.",
     image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "The Promise of WebGPU",
     summary: "WebGPU brings serious graphics to the browser.",
     image: "https://images.unsplash.com/photo-1464820453369-31d2c0b651af?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
   {
     title: "Secure Frontend with CSP",
     summary: "Modern content security policies and React.",
     image: "https://images.unsplash.com/photo-1485218128980-9ce1ecb701a4?auto=format&fit=crop&w=400&q=80",
-    url: "#",
+    url: "/blogs",
   },
 ];
 
@@ -163,8 +163,6 @@ const Blogs = () => {
                 <a
                   href={blog.url}
                   key={idx}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="group bg-gradient-to-tr from-zinc-900 to-zinc-800 shadow-xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105"
                 >
                   <div className="relative">

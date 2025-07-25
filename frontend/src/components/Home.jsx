@@ -157,10 +157,11 @@ const Home = () => {
                     <span className="relative z-10">Get Started Today</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-700 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </button>
+                  <Link to = '/about'>
 
                   <button className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 rounded-full font-semibold text-white hover:bg-white/5 transition-all duration-300 backdrop-blur-sm">
                     Learn More
-                  </button>
+                  </button> </Link>
                 </div>
               </div>
 
