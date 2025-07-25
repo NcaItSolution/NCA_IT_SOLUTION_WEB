@@ -1,27 +1,22 @@
 const mongoose=require('mongoose')
 const {Schema}=mongoose
 
-const jobApplication=new Schema({
+const userSchema=new Schema({
     fullName:{
-        type:String,
-        required:true
+        type:String
     },
     emailAddress:{
         type:String,
-        requierd:true
+        required:true    
     },
-    phoneNumber:{
+    subject:{
         type:String,
         required:true
     },
-    resume:{
+    message:{
         type:String,
         required:true
-    },
-    coverLetter:{
-        type:String
     }
 },{timestamps:true})
 
-
-module.exports=mongoose.model('jobApp',jobApplication)
+module.exports=mongoose.model('user',userSchema)
