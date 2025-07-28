@@ -1,21 +1,22 @@
-import React from 'react'
+import React from 'react';
 
 const JavaScript = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent("Hi, I'm interested in the JavaScript Full Stack course. Please share the details!");
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
+          src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+          alt="JavaScript Full Stack"
           className="w-full h-64 object-contain bg-gray-800 p-6"
         />
 
         {/* Content */}
         <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
+          <h2 className="text-3xl font-bold mb-4">JavaScript Full Stack Developer Course</h2>
           <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
           <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
 
@@ -23,104 +24,83 @@ const JavaScript = () => {
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
             <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack</h4>
               <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
+                <li>Understanding Web Architecture</li>
+                <li>Overview of JavaScript Ecosystem</li>
+                <li>Setting Up Dev Environment (VS Code, Node.js)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
+              <h4 className="font-semibold text-lg mb-2">2. HTML, CSS & JavaScript</h4>
               <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
+                <li>HTML5, CSS3, Flexbox, Grid</li>
+                <li>Vanilla JavaScript, DOM, Events</li>
+                <li>ES6+, Fetch API, JSON</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">3. Frontend Framework – React</h4>
               <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
+                <li>React Basics, Hooks, Router</li>
+                <li>Axios, Forms, Component Lifecycle</li>
+                <li>State Management (Context/Redux)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">4. Backend Development – Node.js & Express</h4>
               <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
+                <li>Node.js Core Modules, NPM</li>
+                <li>Express Routing & Middleware</li>
+                <li>Building RESTful APIs</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
+              <h4 className="font-semibold text-lg mb-2">5. Database – MongoDB</h4>
               <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
+                <li>MongoDB Basics & Atlas</li>
+                <li>Mongoose ORM, CRUD Operations</li>
+                <li>Data Modeling & Indexing</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
+              <h4 className="font-semibold text-lg mb-2">6. Authentication & Security</h4>
               <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
+                <li>JWT, OAuth, Cookies & Sessions</li>
+                <li>Password Hashing, Role-Based Auth</li>
+                <li>Helmet, CORS, Input Sanitization</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
+              <h4 className="font-semibold text-lg mb-2">7. DevOps & Deployment</h4>
               <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
+                <li>Git/GitHub, Git Workflow</li>
+                <li>CI/CD, Deployment on Render/Vercel</li>
+                <li>Environment Variables & Logs</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
+              <h4 className="font-semibold text-lg mb-2">8. Advanced Topics</h4>
               <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
+                <li>WebSockets, Real-time with Socket.IO</li>
+                <li>GraphQL Basics</li>
+                <li>Unit Testing with Jest</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
+              <h4 className="font-semibold text-lg mb-2">9. Final Project</h4>
               <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
-              <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
-              <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
-              <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
+                <li>Full Stack MERN Application</li>
+                <li>Authentication, APIs, CRUD</li>
+                <li>Frontend + Backend + DB Integration</li>
               </ul>
             </div>
           </div>
@@ -137,7 +117,7 @@ const JavaScript = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default JavaScript
+export default JavaScript;

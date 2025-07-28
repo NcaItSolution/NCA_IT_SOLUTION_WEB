@@ -23,6 +23,17 @@ import AwsAzure from "./components/Services/AwsAzure";
 import IvrSol from "./components/Services/IvrSol";
 import ScrollToTop from "./components/ScrollToTop";
 import SampleBlog from "./components/SampleBlog";
+import AIBlog from "./components/Blogs/AIBlog";
+import CloudNativeBlog from "./components/Blogs/Cloud-NativeBlog";
+import CSPBlog from "./components/Blogs/CSPBlog";
+import CSSBlog from "./components/Blogs/CSSBlog";
+import EdgeComputerBlog from "./components/Blogs/EdgeComputingBlog";
+import JavaScriptBlog from "./components/Blogs/JavaScriptBlog";
+import NextBlog from "./components/Blogs/NextBlod";
+import NodejsBlog from "./components/Blogs/NodejsBolg";
+import QuantumBlog from "./components/Blogs/QuantumBlog";
+import ReactBlog from "./components/Blogs/ReactBlog";
+import TypeScriptBlog from "./components/Blogs/TypeScriptBlog";
 import Courses from "./components/Courses";
 import DotNet from "./components/Courses/DotNet";
 import JFS from "./components/Courses/JFS";
@@ -77,7 +88,19 @@ function App() {
       <Route path="/services/aws-azure" element={<AwsAzure/>}/>
       <Route path="/services/ivr" element={<IvrSol/>}/>
       {/* Sample Blogs Routes */}
+      <Route path="/cloudblog" element={<CloudNativeBlog/>}/>
+      <Route path="/aiblog" element={<AIBlog/>}/>
+      <Route path="/cspblog" element={<CSPBlog/>}/>
+      <Route path="/cssblog" element={<CSSBlog/>}/>
+      <Route path="/edgblog" element={<EdgeComputerBlog/>}/>
+      <Route path="/javascriptblog" element={<JavaScriptBlog/>}/>
+      <Route path="/nextblog" element={<NextBlog/>}/>
+      <Route path="/nodeblog" element={<NodejsBlog/>}/>
+      <Route path="/quantumblog" element={<QuantumBlog/>}/>
+      <Route path="/reactblog" element={<ReactBlog/>}/>
+      <Route path="/typescriptblog" element={<TypeScriptBlog/>}/>
       <Route path="/blogs" element={<SampleBlog/>}/>
+      
 
 
 
