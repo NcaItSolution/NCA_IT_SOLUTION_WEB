@@ -24,6 +24,8 @@ import IvrSol from "./components/Services/IvrSol";
 import ScrollToTop from "./components/ScrollToTop";
 import SampleBlog from "./components/SampleBlog";
 import Courses from "./components/Courses";
+import DotNet from "./components/Courses/DotNet";
+import JFS from "./components/Courses/JFS";
 
 function App() {
   return (
@@ -54,6 +56,12 @@ function App() {
       <Route path="/services/ivr" element={<IvrSol/>}/>
       {/* Sample Blogs Routes */}
       <Route path="/blogs" element={<SampleBlog/>}/>
+
+
+
+      {/* Courses Pages */}
+      <Route path="/courses/1" element={<DotNet/>}/>
+      <Route path="/courses/2" element={<JFS/>}/>
 
 
       
