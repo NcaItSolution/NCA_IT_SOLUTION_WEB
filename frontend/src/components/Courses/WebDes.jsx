@@ -1,128 +1,153 @@
-import React from 'react'
+import React from 'react';
 
 const WebDes = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent("Hi, I'm interested in the Web Designing course. Please share the details!");
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
+          src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png"
+          alt="Web Designing Course"
           className="w-full h-64 object-contain bg-gray-800 p-6"
         />
 
         {/* Content */}
         <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+          <h2 className="text-3xl font-bold mb-4">Web Designing Course</h2>
+          <p className="mb-2"><span className="font-semibold">Duration:</span> 4 Months</p>
+          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹18,000</p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
-            <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
-              <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
-              <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
-              <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
-              <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
-              <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
-              <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
-              <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
-              <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
-              <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
-              <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
-              <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
-              <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
-              </ul>
-            </div>
+            {[
+              {
+                title: "1. Introduction to Web Design",
+                items: [
+                  "What is Web Designing?",
+                  "Difference Between Web Design & Web Development",
+                  "Types of Websites (Static vs Dynamic)",
+                  "Tools for Web Designing (VS Code, Figma, Adobe XD)"
+                ]
+              },
+              {
+                title: "2. HTML (HyperText Markup Language)",
+                items: [
+                  "Introduction to HTML5",
+                  "HTML Page Structure & Elements",
+                  "Forms & Input Elements",
+                  "Semantic HTML",
+                  "HTML5 Multimedia (Audio, Video)",
+                  "SEO-friendly HTML"
+                ]
+              },
+              {
+                title: "3. CSS (Cascading Style Sheets)",
+                items: [
+                  "Introduction to CSS3",
+                  "Selectors & Properties",
+                  "Box Model & Positioning",
+                  "Flexbox & Grid Layout",
+                  "CSS Animations & Transitions",
+                  "Responsive Design with Media Queries",
+                  "CSS Preprocessors (SASS, LESS)"
+                ]
+              },
+              {
+                title: "4. JavaScript for Web Designers",
+                items: [
+                  "Introduction to JavaScript",
+                  "Variables, Data Types & Operators",
+                  "Functions & Events",
+                  "DOM Manipulation",
+                  "JavaScript ES6+ Features",
+                  "jQuery Basics (Optional)",
+                  "JSON & Fetch API for Dynamic Content"
+                ]
+              },
+              {
+                title: "5. UI/UX Design Fundamentals",
+                items: [
+                  "Understanding User Experience (UX)",
+                  "UI Design Principles & Best Practices",
+                  "Color Theory & Typography",
+                  "Wireframing & Prototyping (Figma, Adobe XD)",
+                  "Usability Testing"
+                ]
+              },
+              {
+                title: "6. Responsive Web Design (RWD)",
+                items: [
+                  "Mobile-First Design Approach",
+                  "Using CSS Grid & Flexbox for Responsive Layouts",
+                  "Bootstrap 5 Framework",
+                  "Testing Responsive Design (Chrome DevTools, Lighthouse)"
+                ]
+              },
+              {
+                title: "7. Web Animation & Interactivity",
+                items: [
+                  "CSS Animations & Transitions",
+                  "JavaScript Animations (GSAP)",
+                  "Parallax Scrolling Effects"
+                ]
+              },
+              {
+                title: "8. Web Design Tools & Frameworks",
+                items: [
+                  "Bootstrap & Tailwind CSS",
+                  "Material UI for Web Design",
+                  "Webflow & No-Code Web Builders (Optional)"
+                ]
+              },
+              {
+                title: "9. Web Performance Optimization",
+                items: [
+                  "Image Optimization for Web",
+                  "Minification & Compression (CSS, JS)",
+                  "Lazy Loading & Caching",
+                  "SEO Best Practices"
+                ]
+              },
+              {
+                title: "10. Website Hosting & Deployment",
+                items: [
+                  "Web Hosting & Domain Names",
+                  "FTP & cPanel Basics",
+                  "Deploying Websites on GitHub Pages, Netlify, Vercel",
+                  "WordPress Basics (Optional)"
+                ]
+              },
+              {
+                title: "11. Web Security Basics",
+                items: [
+                  "SSL & HTTPS Implementation",
+                  "Preventing Common Attacks (XSS, CSRF)",
+                  "Secure Form Validation"
+                ]
+              },
+              {
+                title: "12. Real-World Web Design Project",
+                items: [
+                  "Designing & Developing a Portfolio Website",
+                  "Creating an E-Commerce or Blog UI",
+                  "Implementing SEO Best Practices",
+                  "Testing & Launching the Website"
+                ]
+              }
+            ].map((section, index) => (
+              <div key={index}>
+                <h4 className="font-semibold text-lg mb-2">{section.title}</h4>
+                <ul className="list-disc list-inside">
+                  {section.items.map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
           {/* WhatsApp Button */}
@@ -137,7 +162,7 @@ const WebDes = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WebDes
+export default WebDes;

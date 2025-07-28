@@ -2,125 +2,84 @@ import React from 'react'
 
 const NodeD = () => {
     const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+    const sampleMessage = encodeURIComponent("Hi, I'm interested in the Node JS Development course. Please share the details!");
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
-      <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
-        {/* Image Banner */}
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
-          className="w-full h-64 object-contain bg-gray-800 p-6"
-        />
+    <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
+      {/* Image Banner */}
+      <img
+        src="https://nodejs.org/static/images/logo.svg"
+        alt="Node JS Development"
+        className="w-full h-64 object-contain bg-gray-800 p-6"
+      />
 
-        {/* Content */}
-        <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+      {/* Content */}
+      <div className="p-6 text-white">
+          <h2 className="text-3xl font-bold mb-4">Node JS Development Course</h2>
+          <p className="mb-2"><span className="font-semibold">Duration:</span> 2 Months</p>
+          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹8,000</p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
+            {/* Add your syllabus content here — reused or updated per your structure */}
             <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to Node.js</h4>
               <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
+                <li>Environment Setup & NPM</li>
+                <li>Event Loop & Modules</li>
+                <li>Asynchronous Programming</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
+              <h4 className="font-semibold text-lg mb-2">2. Express.js Framework</h4>
               <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
+                <li>Routing, Middleware</li>
+                <li>Template Engines</li>
+                <li>REST API Development</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">3. Database Integration</h4>
               <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
+                <li>MongoDB CRUD</li>
+                <li>Mongoose ODM</li>
+                <li>MySQL/PostgreSQL (optional)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">4. Authentication & Security</h4>
               <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
+                <li>JWT & Passport.js</li>
+                <li>Role-based Access</li>
+                <li>Input Validation & Rate Limiting</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
+              <h4 className="font-semibold text-lg mb-2">5. Real-Time Communication</h4>
               <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
+                <li>WebSockets with Socket.IO</li>
+                <li>Chat App Integration</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
+              <h4 className="font-semibold text-lg mb-2">6. Deployment</h4>
               <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
+                <li>Using PM2, Nginx</li>
+                <li>Deployment to Heroku, Vercel or VPS</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
+              <h4 className="font-semibold text-lg mb-2">7. Final Project</h4>
               <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
-              <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
-              <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
-              <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
-              <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
-              <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
+                <li>Build a Full-Stack Node.js App</li>
+                <li>Deployment + Hosting</li>
               </ul>
             </div>
           </div>

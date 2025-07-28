@@ -46,6 +46,8 @@ import DataSci from "./components/Courses/DataSci";
 import EthiHack from "./components/Courses/EthiHack";
 import Sql from "./components/Courses/Sql";
 import Java from "./components/Courses/Java";
+import WebDes from "./components/Courses/WebDes";
+import NodeD from "./components/Courses/NodeD";
 
 function App() {
   return (
@@ -88,14 +90,14 @@ function App() {
       <Route path="/courses/6" element={<PhpFS/>}/>
       <Route path="/courses/7" element={<DsMl/>}/>
       <Route path="/courses/8" element={<CsEh/>}/>
-      <Route path="/courses/9" element={<WebD/>}/>
+      <Route path="/courses/9" element={<WebDes/>}/>
       <Route path="/courses/10" element={<Mongo/>}/>
       <Route path="/courses/11" element={<ReactD/>}/>
       <Route path="/courses/12" element={<AI/>}/>
       <Route path="/courses/13" element={<CSharp/>}/>
       <Route path="/courses/14" element={<CompHard/>}/>
       <Route path="/courses/15" element={<JavaScript/>}/>
-      <Route path="/courses/16" element={<Node/>}/>
+      <Route path="/courses/16" element={<NodeD/>}/>
       <Route path="/courses/17" element={<Python/>}/>
       <Route path="/courses/18" element={<Angular/>}/>
       <Route path="/courses/19" element={<C/>}/>

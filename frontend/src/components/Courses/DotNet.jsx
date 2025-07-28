@@ -17,8 +17,8 @@ const DotNet = () => {
         {/* Content */}
         <div className="p-6 text-white">
           <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+          <p className="mb-2"><span className="font-semibold">Duration:</span> 4 Months</p>
+          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹24,000</p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
