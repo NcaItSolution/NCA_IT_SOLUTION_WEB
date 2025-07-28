@@ -1,126 +1,130 @@
-import React from 'react'
+import React from 'react';
 
 const Angular = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent(
+    "Hi, I'm interested in the Angular Development course. Please share the details!"
+  );
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
+          src="https://angular.io/assets/images/logos/angular/angular.svg"
+          alt="Angular Development"
           className="w-full h-64 object-contain bg-gray-800 p-6"
         />
 
         {/* Content */}
         <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+          <h2 className="text-3xl font-bold mb-4">Angular Development Course</h2>
+          <p className="mb-2">
+            <span className="font-semibold">Duration:</span> 2 Months
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Cost:</span> ₹8,000
+          </p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
             <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to Angular</h4>
               <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
+                <li>What is Angular? SPA & MVC Architecture</li>
+                <li>Angular CLI and Development Environment Setup</li>
+                <li>TypeScript Basics for Angular</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
+              <h4 className="font-semibold text-lg mb-2">2. Components and Templates</h4>
               <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
+                <li>Component Architecture & Metadata</li>
+                <li>Template Syntax, Data Binding</li>
+                <li>Directives (Structural & Attribute)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">3. Services and Dependency Injection</h4>
               <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
+                <li>Creating and Providing Services</li>
+                <li>Dependency Injection in Angular</li>
+                <li>Singleton Services and Hierarchical Injectors</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">4. Angular Routing and Navigation</h4>
               <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
+                <li>Router Module & Router Outlet</li>
+                <li>Route Guards and Lazy Loading</li>
+                <li>Query Params and Route Parameters</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
+              <h4 className="font-semibold text-lg mb-2">5. Forms in Angular</h4>
               <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
+                <li>Template-driven Forms</li>
+                <li>Reactive Forms and Form Validation</li>
+                <li>Custom Validators</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
+              <h4 className="font-semibold text-lg mb-2">6. HTTP Client & Observables</h4>
               <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
+                <li>HTTP Requests & REST API Integration</li>
+                <li>RxJS Observables and Operators</li>
+                <li>Error Handling & Interceptors</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
+              <h4 className="font-semibold text-lg mb-2">7. State Management with NgRx</h4>
               <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
+                <li>Introduction to Redux Pattern</li>
+                <li>Actions, Reducers, and Store</li>
+                <li>Effects and Selectors</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
+              <h4 className="font-semibold text-lg mb-2">8. Angular Material and Styling</h4>
               <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
+                <li>Angular Material Components</li>
+                <li>Theming and Custom Styles</li>
+                <li>Responsive Design with Flex Layout</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
+              <h4 className="font-semibold text-lg mb-2">9. Testing Angular Applications</h4>
               <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
+                <li>Unit Testing with Jasmine and Karma</li>
+                <li>End-to-End Testing with Protractor</li>
+                <li>Debugging Angular Apps</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
+              <h4 className="font-semibold text-lg mb-2">10. Deployment & Best Practices</h4>
               <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
+                <li>Building for Production</li>
+                <li>Performance Optimization</li>
+                <li>Security Considerations</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
+              <h4 className="font-semibold text-lg mb-2">11. Real-World Project</h4>
               <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
-              <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
+                <li>Develop a Complete Angular SPA</li>
+                <li>Integrate API and State Management</li>
+                <li>Deploy to a Cloud Platform</li>
               </ul>
             </div>
           </div>
@@ -137,7 +141,7 @@ const Angular = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Angular
+export default Angular;

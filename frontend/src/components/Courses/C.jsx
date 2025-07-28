@@ -1,143 +1,144 @@
-import React from 'react'
+import React from 'react';
 
 const C = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent(
+    "Hi, I'm interested in the Programming in C course. Please share the details!"
+  );
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
-    <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
-      {/* Image Banner */}
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-        alt=".NET Full Stack"
-        className="w-full h-64 object-contain bg-gray-800 p-6"
-      />
+      <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
+        {/* Image Banner */}
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
+          alt="Programming in C"
+          className="w-full h-64 object-contain bg-gray-800 p-6"
+        />
 
-      {/* Content */}
-      <div className="p-6 text-white">
-        <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-        <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-        <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+        {/* Content */}
+        <div className="p-6 text-white">
+          <h2 className="text-3xl font-bold mb-4">Programming in C Course</h2>
+          <p className="mb-2">
+            <span className="font-semibold">Duration:</span> 2 Months
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Cost:</span> ₹5,000
+          </p>
 
-        <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
+          <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
-        <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
-            <ul className="list-disc list-inside">
-              <li>Understanding Full Stack Development</li>
-              <li>Overview of .NET Full Stack Technologies</li>
-              <li>Setting Up Development Environment</li>
-            </ul>
+          <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
+            <div>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to C Programming</h4>
+              <ul className="list-disc list-inside">
+                <li>History and Features of C</li>
+                <li>Setting up Development Environment</li>
+                <li>Basic Structure of a C Program</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">2. Data Types, Variables, and Operators</h4>
+              <ul className="list-disc list-inside">
+                <li>Basic Data Types and Constants</li>
+                <li>Variables and Scope</li>
+                <li>Operators and Expressions</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">3. Control Flow Statements</h4>
+              <ul className="list-disc list-inside">
+                <li>Conditional Statements (if, else, switch)</li>
+                <li>Loops (for, while, do-while)</li>
+                <li>Break and Continue</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">4. Functions and Recursion</h4>
+              <ul className="list-disc list-inside">
+                <li>Defining and Calling Functions</li>
+                <li>Function Parameters and Return Types</li>
+                <li>Recursive Functions</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">5. Arrays and Strings</h4>
+              <ul className="list-disc list-inside">
+                <li>One-dimensional and Multi-dimensional Arrays</li>
+                <li>String Handling and Manipulation</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">6. Pointers and Dynamic Memory</h4>
+              <ul className="list-disc list-inside">
+                <li>Understanding Pointers</li>
+                <li>Pointer Arithmetic</li>
+                <li>Dynamic Memory Allocation (malloc, calloc, free)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">7. Structures and Unions</h4>
+              <ul className="list-disc list-inside">
+                <li>Defining and Using Structures</li>
+                <li>Nesting Structures</li>
+                <li>Unions and Enumerations</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">8. File Input/Output</h4>
+              <ul className="list-disc list-inside">
+                <li>Reading from and Writing to Files</li>
+                <li>File Pointers and Modes</li>
+                <li>Error Handling in File Operations</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">9. Preprocessor Directives and Macros</h4>
+              <ul className="list-disc list-inside">
+                <li>Macros and #define</li>
+                <li>Conditional Compilation</li>
+                <li>Include Guards and File Inclusion</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">10. Debugging and Best Practices</h4>
+              <ul className="list-disc list-inside">
+                <li>Common Errors and Debugging Techniques</li>
+                <li>Code Optimization and Style Guidelines</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-lg mb-2">11. Project</h4>
+              <ul className="list-disc list-inside">
+                <li>Build a Complete C Application</li>
+                <li>Apply Learned Concepts to Solve Real-World Problems</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
-            <ul className="list-disc list-inside">
-              <li>Data Types, Variables, Control Statements</li>
-              <li>OOP: Classes, Inheritance, Polymorphism</li>
-              <li>LINQ, File Handling, Async Programming</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
-            <ul className="list-disc list-inside">
-              <li>ASP.NET Core MVC, Razor Pages</li>
-              <li>Routing, Middleware, DI, Blazor Overview</li>
-              <li>EF Core: Code-First, Migrations</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
-            <ul className="list-disc list-inside">
-              <li>RESTful APIs, Model Binding</li>
-              <li>JWT, OAuth 2.0, Identity Server</li>
-              <li>Swagger, Versioning</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
-            <ul className="list-disc list-inside">
-              <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-              <li>JS, ES6, Promises</li>
-              <li>Angular: Components, NgRx, Forms</li>
-              <li>React: Hooks, Router, Axios</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
-            <ul className="list-disc list-inside">
-              <li>Design, CRUD, Stored Procs, Triggers</li>
-              <li>Indexing, Transactions</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
-            <ul className="list-disc list-inside">
-              <li>Role-Based Auth, Identity Framework</li>
-              <li>JWT, Encryption, API Security</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
-            <ul className="list-disc list-inside">
-              <li>Azure/AWS Deployment</li>
-              <li>CI/CD, Docker, Kubernetes</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
-            <ul className="list-disc list-inside">
-              <li>API Gateway, gRPC, RabbitMQ</li>
-              <li>Service Discovery</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
-            <ul className="list-disc list-inside">
-              <li>Git/GitHub, CI/CD Setup</li>
-              <li>Quality Checks & Automation</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
-            <ul className="list-disc list-inside">
-              <li>Unit/Integration Testing (xUnit, NUnit)</li>
-              <li>Logging (Serilog), Monitoring</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
-            <ul className="list-disc list-inside">
-              <li>Full Stack Application</li>
-              <li>Deployment, Optimization</li>
-            </ul>
-          </div>
+          {/* WhatsApp Button */}
+          <a
+            href={`https://wa.me/${whatsappNumber}?text=${sampleMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 block text-center bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded transition"
+          >
+            Enroll Now
+          </a>
         </div>
-
-        {/* WhatsApp Button */}
-        <a
-          href={`https://wa.me/${whatsappNumber}?text=${sampleMessage}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 block text-center bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded transition"
-        >
-          Enroll Now
-        </a>
       </div>
     </div>
-  </div>
-  )
-}
+  );
+};
 
-export default C
+export default C;

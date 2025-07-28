@@ -1,126 +1,139 @@
-import React from 'react'
+import React from 'react';
 
 const DataSci = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent(
+    "Hi, I'm interested in the Data Science course. Please share the details!"
+  );
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
+          src="https://cdn-icons-png.flaticon.com/512/4140/4140043.png"
+          alt="Data Science"
           className="w-full h-64 object-contain bg-gray-800 p-6"
         />
 
         {/* Content */}
         <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+          <h2 className="text-3xl font-bold mb-4">Data Science Course</h2>
+          <p className="mb-2">
+            <span className="font-semibold">Duration:</span> 2 Months
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Cost:</span> ₹20,000
+          </p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
             <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to Data Science</h4>
               <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
+                <li>What is Data Science?</li>
+                <li>Data Science Lifecycle and Applications</li>
+                <li>Tools and Technologies Overview</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
+              <h4 className="font-semibold text-lg mb-2">2. Python for Data Science</h4>
               <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
+                <li>Python Basics and Syntax</li>
+                <li>Data Structures and Libraries (NumPy, Pandas)</li>
+                <li>Data Cleaning and Preprocessing</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">3. Data Visualization</h4>
               <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
+                <li>Matplotlib and Seaborn</li>
+                <li>Plotly and Interactive Visualizations</li>
+                <li>Storytelling with Data</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">4. Statistics and Probability</h4>
               <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
+                <li>Descriptive and Inferential Statistics</li>
+                <li>Probability Theory</li>
+                <li>Hypothesis Testing and Confidence Intervals</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
+              <h4 className="font-semibold text-lg mb-2">5. Machine Learning Fundamentals</h4>
               <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
+                <li>Supervised vs Unsupervised Learning</li>
+                <li>Regression, Classification, Clustering</li>
+                <li>Model Evaluation and Validation</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
+              <h4 className="font-semibold text-lg mb-2">6. Advanced Machine Learning</h4>
               <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
+                <li>Decision Trees and Random Forests</li>
+                <li>Support Vector Machines</li>
+                <li>Ensemble Methods</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
+              <h4 className="font-semibold text-lg mb-2">7. Deep Learning Basics</h4>
               <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
+                <li>Introduction to Neural Networks</li>
+                <li>Deep Learning Frameworks (TensorFlow, Keras)</li>
+                <li>Building and Training Neural Networks</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
+              <h4 className="font-semibold text-lg mb-2">8. Natural Language Processing (NLP)</h4>
               <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
+                <li>Text Preprocessing</li>
+                <li>Sentiment Analysis</li>
+                <li>Topic Modeling and NLP Applications</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
+              <h4 className="font-semibold text-lg mb-2">9. Big Data and Cloud Computing</h4>
               <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
+                <li>Introduction to Big Data Concepts</li>
+                <li>Hadoop and Spark Overview</li>
+                <li>Cloud Platforms for Data Science (AWS, Azure)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
+              <h4 className="font-semibold text-lg mb-2">10. Data Engineering Basics</h4>
               <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
+                <li>Data Warehousing and ETL Processes</li>
+                <li>Working with Databases (SQL, NoSQL)</li>
+                <li>Data Pipelines and Automation</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
+              <h4 className="font-semibold text-lg mb-2">11. Model Deployment and Monitoring</h4>
               <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
+                <li>API Creation for Models</li>
+                <li>Docker and Containerization</li>
+                <li>Monitoring and Maintenance of Models</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
+              <h4 className="font-semibold text-lg mb-2">12. Capstone Project</h4>
               <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
+                <li>End-to-End Data Science Project</li>
+                <li>Data Collection, Cleaning, Modeling, and Deployment</li>
+                <li>Presentation and Documentation</li>
               </ul>
             </div>
           </div>
@@ -137,7 +150,7 @@ const DataSci = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DataSci
+export default DataSci;

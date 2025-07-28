@@ -1,126 +1,138 @@
-import React from 'react'
+import React from 'react';
 
 const CsEh = () => {
-    const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
+  const whatsappNumber = '918287584509';
+  const sampleMessage = encodeURIComponent(
+    "Hi, I'm interested in the Cyber Security and Ethical Hacking course. Please share the details!"
+  );
+
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg"
-          alt=".NET Full Stack"
+          src="https://cdn-icons-png.flaticon.com/512/633/633600.png"
+          alt="Cyber Security and Ethical Hacking"
           className="w-full h-64 object-contain bg-gray-800 p-6"
         />
 
         {/* Content */}
         <div className="p-6 text-white">
-          <h2 className="text-3xl font-bold mb-4">.NET Full Stack Developer Course</h2>
-          <p className="mb-2"><span className="font-semibold">Duration:</span> 4–5 Months</p>
-          <p className="mb-4"><span className="font-semibold">Cost:</span> ₹20,000</p>
+          <h2 className="text-3xl font-bold mb-4">Cyber Security and Ethical Hacking Course</h2>
+          <p className="mb-2">
+            <span className="font-semibold">Duration:</span> 12 Months
+          </p>
+          <p className="mb-4">
+            <span className="font-semibold">Cost:</span> ₹80,000
+          </p>
 
           <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
             <div>
-              <h4 className="font-semibold text-lg mb-2">1. Introduction to Full Stack Development</h4>
+              <h4 className="font-semibold text-lg mb-2">1. Introduction to Cyber Security</h4>
               <ul className="list-disc list-inside">
-                <li>Understanding Full Stack Development</li>
-                <li>Overview of .NET Full Stack Technologies</li>
-                <li>Setting Up Development Environment</li>
+                <li>Fundamentals of Cybersecurity</li>
+                <li>Types of Cyber Threats and Attacks</li>
+                <li>Ethical Hacking Overview and Legal Aspects</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">2. C# and .NET Core Fundamentals</h4>
+              <h4 className="font-semibold text-lg mb-2">2. Networking Basics</h4>
               <ul className="list-disc list-inside">
-                <li>Data Types, Variables, Control Statements</li>
-                <li>OOP: Classes, Inheritance, Polymorphism</li>
-                <li>LINQ, File Handling, Async Programming</li>
+                <li>OSI and TCP/IP Models</li>
+                <li>Network Devices and Protocols</li>
+                <li>IP Addressing and Subnetting</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">3. .NET Core & ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">3. Information Security Concepts</h4>
               <ul className="list-disc list-inside">
-                <li>ASP.NET Core MVC, Razor Pages</li>
-                <li>Routing, Middleware, DI, Blazor Overview</li>
-                <li>EF Core: Code-First, Migrations</li>
+                <li>Confidentiality, Integrity, and Availability (CIA Triad)</li>
+                <li>Cryptography Basics</li>
+                <li>Security Policies and Procedures</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">4. API Development with ASP.NET Core</h4>
+              <h4 className="font-semibold text-lg mb-2">4. Ethical Hacking Techniques</h4>
               <ul className="list-disc list-inside">
-                <li>RESTful APIs, Model Binding</li>
-                <li>JWT, OAuth 2.0, Identity Server</li>
-                <li>Swagger, Versioning</li>
+                <li>Reconnaissance and Footprinting</li>
+                <li>Scanning and Enumeration</li>
+                <li>Vulnerability Analysis</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">5. Frontend Development</h4>
+              <h4 className="font-semibold text-lg mb-2">5. System Hacking</h4>
               <ul className="list-disc list-inside">
-                <li>HTML5, CSS3, Bootstrap, Tailwind</li>
-                <li>JS, ES6, Promises</li>
-                <li>Angular: Components, NgRx, Forms</li>
-                <li>React: Hooks, Router, Axios</li>
+                <li>Gaining Access and Privilege Escalation</li>
+                <li>Maintaining Access and Covering Tracks</li>
+                <li>Malware Threats and Defense</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">6. Database Management – SQL Server</h4>
+              <h4 className="font-semibold text-lg mb-2">6. Web Application Security</h4>
               <ul className="list-disc list-inside">
-                <li>Design, CRUD, Stored Procs, Triggers</li>
-                <li>Indexing, Transactions</li>
+                <li>Common Web Attacks (XSS, SQL Injection, CSRF)</li>
+                <li>Secure Coding Practices</li>
+                <li>Web Vulnerability Scanning Tools</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">7. Authentication & Security</h4>
+              <h4 className="font-semibold text-lg mb-2">7. Network Security</h4>
               <ul className="list-disc list-inside">
-                <li>Role-Based Auth, Identity Framework</li>
-                <li>JWT, Encryption, API Security</li>
+                <li>Firewalls and IDS/IPS</li>
+                <li>VPNs and Secure Network Design</li>
+                <li>Wireless Network Security</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">8. Cloud Computing & Deployment</h4>
+              <h4 className="font-semibold text-lg mb-2">8. Cryptography and PKI</h4>
               <ul className="list-disc list-inside">
-                <li>Azure/AWS Deployment</li>
-                <li>CI/CD, Docker, Kubernetes</li>
+                <li>Symmetric and Asymmetric Encryption</li>
+                <li>Public Key Infrastructure (PKI)</li>
+                <li>Digital Signatures and Certificates</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">9. Microservices Architecture</h4>
+              <h4 className="font-semibold text-lg mb-2">9. Security Tools & Techniques</h4>
               <ul className="list-disc list-inside">
-                <li>API Gateway, gRPC, RabbitMQ</li>
-                <li>Service Discovery</li>
+                <li>Using Kali Linux and Penetration Testing Tools</li>
+                <li>Network Analyzers (Wireshark)</li>
+                <li>Exploitation Frameworks (Metasploit)</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">10. DevOps & Version Control</h4>
+              <h4 className="font-semibold text-lg mb-2">10. Incident Response and Management</h4>
               <ul className="list-disc list-inside">
-                <li>Git/GitHub, CI/CD Setup</li>
-                <li>Quality Checks & Automation</li>
+                <li>Incident Handling Process</li>
+                <li>Forensics and Evidence Collection</li>
+                <li>Disaster Recovery and Business Continuity</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">11. Testing & Debugging</h4>
+              <h4 className="font-semibold text-lg mb-2">11. Cyber Security Standards and Compliance</h4>
               <ul className="list-disc list-inside">
-                <li>Unit/Integration Testing (xUnit, NUnit)</li>
-                <li>Logging (Serilog), Monitoring</li>
+                <li>ISO 27001, NIST, GDPR Overview</li>
+                <li>Security Audits and Risk Assessment</li>
               </ul>
             </div>
 
             <div>
-              <h4 className="font-semibold text-lg mb-2">12. Real-World Project</h4>
+              <h4 className="font-semibold text-lg mb-2">12. Capstone Project</h4>
               <ul className="list-disc list-inside">
-                <li>Full Stack Application</li>
-                <li>Deployment, Optimization</li>
+                <li>Perform a Complete Ethical Hacking Assessment</li>
+                <li>Prepare Security Audit Reports</li>
+                <li>Apply Learned Concepts in a Simulated Environment</li>
               </ul>
             </div>
           </div>
@@ -137,7 +149,7 @@ const CsEh = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CsEh
+export default CsEh;
