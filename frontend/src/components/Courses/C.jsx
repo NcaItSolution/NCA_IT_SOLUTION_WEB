@@ -1,9 +1,8 @@
 import React from 'react'
 
-
-const MEAN = () => {
+const C = () => {
     const whatsappNumber = '918287584509';
-    const sampleMessage = encodeURIComponent("Hi, I'm interested in the MEAN Full Stack course. Please share the details!");
+    const sampleMessage = encodeURIComponent("Hi, I'm interested in the .NET Full Stack course. Please share the details!");
   return (
     <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
     <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
@@ -141,4 +140,4 @@ const MEAN = () => {
   )
 }
 
-export default MEAN
+export default C
