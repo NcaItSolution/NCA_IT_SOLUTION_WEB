@@ -23,6 +23,7 @@ import AwsAzure from "./components/Services/AwsAzure";
 import IvrSol from "./components/Services/IvrSol";
 import ScrollToTop from "./components/ScrollToTop";
 import SampleBlog from "./components/SampleBlog";
+import Courses from "./components/Courses";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path="/blog" element= {<Blogs/>} ></Route>
       <Route path="/career" element={<CareersPage/>}/>
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/courses" element={<Courses/>}/>
       {/*Services Route  */}
       <Route path="/services/web-app" element={<WebD/>}/>
       <Route path="/services/android" element={<Android/>}/>

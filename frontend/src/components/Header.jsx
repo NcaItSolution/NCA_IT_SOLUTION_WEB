@@ -8,6 +8,7 @@ import { MdEmail } from 'react-icons/md';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// --- Updated navItems array --- //
 const navItems = [
   { name: 'ABOUT', link: '/about' },
   {
@@ -38,6 +39,10 @@ const navItems = [
       },
     ],
   },
+
+  // ---- COURSES inserted here ---- //
+  { name: 'COURSES', link: '/courses' },
+
   { name: 'INDUSTRIES', link: '/industries' },
   { name: 'CAREERS', link: '/career' },
   { name: 'BLOG', link: '/blog' },
@@ -119,33 +124,41 @@ const Header = () => {
                     item.name === 'SERVICES' && setDesktopServicesOpen(false)
                   }
                 >
-                  <Link to={item.link} className="hover:text-red-400">
-                    {item.name}
-                  </Link>
-
-                  {/* Desktop SERVICES Dropdown */}
-                  {item.name === 'SERVICES' && desktopServicesOpen && (
-                    <div className="absolute left-0 top-full bg-gray-900 shadow-xl z-50 w-screen max-w-xl grid grid-cols-1 md:grid-cols-2 p-6 gap-6 text-sm">
-                      {item.submenu.map((section, sIdx) => (
-                        <div key={sIdx}>
-                          <h4 className="font-semibold text-blue-300 mb-2">
-                            {section.category}
-                          </h4>
-                          <ul className="space-y-1 text-gray-200">
-                            {section.items.map((subItem, i) => (
-                              <li key={i}>
-                                <Link
-                                  to={subItem.link}
-                                  className="hover:underline cursor-pointer truncate"
-                                >
-                                  {subItem.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
+                  {/* If item has a link, Link to it. If not, render as button etc. */}
+                  {"submenu" in item ? (
+                    <>
+                      <Link to={item.link || "#"} className="hover:text-red-400">
+                        {item.name}
+                      </Link>
+                      {/* Desktop SERVICES Dropdown */}
+                      {item.name === 'SERVICES' && desktopServicesOpen && (
+                        <div className="absolute left-0 top-full bg-gray-900 shadow-xl z-50 w-screen max-w-xl grid grid-cols-1 md:grid-cols-2 p-6 gap-6 text-sm">
+                          {item.submenu.map((section, sIdx) => (
+                            <div key={sIdx}>
+                              <h4 className="font-semibold text-blue-300 mb-2">
+                                {section.category}
+                              </h4>
+                              <ul className="space-y-1 text-gray-200">
+                                {section.items.map((subItem, i) => (
+                                  <li key={i}>
+                                    <Link
+                                      to={subItem.link}
+                                      className="hover:underline cursor-pointer truncate"
+                                    >
+                                      {subItem.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link to={item.link} className="hover:text-red-400">
+                      {item.name}
+                    </Link>
                   )}
                 </li>
               ))}
@@ -240,5 +253,6 @@ const Header = () => {
     </header>
   );
 };
+
 
 export default Header;
