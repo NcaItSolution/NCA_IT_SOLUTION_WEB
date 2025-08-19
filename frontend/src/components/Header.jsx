@@ -80,7 +80,7 @@ const Header = () => {
   const justDialUrl =
     "https://www.justdial.com/Noida/Nca-It-Solution-Ai-Training-Institute-Noida-Near-Metro-Electronic-City-Noida-Sector-62/011PXX11-XX11-240812093602-I2K6_BZDET?trkid=&term=&ncatid=11294974&area=&search=Showing%20Results%20for%20%22Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062%22%20in%20Noida&mncatname=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&ftterm=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&abd_btn=&abd_heading=&isFreetxt=1&bd=2&cat_b2b_flag=&searchfrom=lst&thumbnail=";
   return (
-   <header className="bg-white text-gray-900 w-full shadow-md z-50">
+   <header className="bg-white text-gray-900 w-full shadow-md z-50 fixed top-0 left-0">
   <div className="w-[92%] max-w-[1600px] mx-auto py-3">
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
       {/* Logo + Hamburger */}

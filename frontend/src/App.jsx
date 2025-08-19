@@ -64,7 +64,7 @@ function App() {
   return (
       <BrowserRouter>
       <ScrollToTop/>
-      <Header/>
+      <Header />
       <Routes>
       <Route path="/" element= {<Home/>} ></Route>
       <Route path="/about" element= {<About/>} ></Route>
