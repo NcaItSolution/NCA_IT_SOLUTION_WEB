@@ -2,8 +2,8 @@ import React from 'react';
 
 const JFS = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center p-6">
-      <div className="bg-gray-900 rounded-2xl shadow-lg max-w-3xl w-full overflow-hidden">
+  <div className="bg-white text-gray-900 min-h-screen flex items-center justify-center p-6">
+  <div className="bg-white border border-gray-200 rounded-2xl shadow-lg max-w-7xl w-full overflow-hidden">
         {/* Image section */}
         <img
           src="https://cdn-icons-png.flaticon.com/512/226/226777.png" // Replace with your Java Full Stack image path
@@ -13,9 +13,9 @@ const JFS = () => {
 
         {/* Syllabus Section */}
         <div className="p-6 space-y-4">
-          <h2 className="text-3xl font-bold text-white mb-4">Java Full Stack Development</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Java Full Stack Development</h2>
 
-          <div className="space-y-2 text-sm text-gray-300 max-h-[400px] overflow-y-auto pr-2">
+          <div className="space-y-2 text-sm text-gray-700 max-h-[400px] overflow-y-auto pr-2">
             <p>1. Introduction to Full Stack Development</p>
             <ul className="list-disc list-inside ml-4">
               <li>What is Full Stack Development?</li>

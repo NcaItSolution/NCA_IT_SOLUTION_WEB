@@ -7,26 +7,26 @@ const C = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
-      <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
+    <div className="min-h-screen bg-white flex items-center justify-center py-10 px-4">
+      <div className="bg-white rounded-lg shadow-lg max-w-7xl w-full overflow-hidden border border-gray-200">
         {/* Image Banner */}
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/3/35/The_C_Programming_Language_logo.svg"
           alt="Programming in C"
-          className="w-full h-64 object-contain bg-gray-800 p-6"
+          className="w-full h-64 object-contain bg-gray-100 p-6"
         />
 
         {/* Content */}
-        <div className="p-6 text-white">
+        <div className="p-8 text-gray-800">
           <h2 className="text-3xl font-bold mb-4">Programming in C Course</h2>
           <p className="mb-2">
             <span className="font-semibold">Duration:</span> 2 Months
           </p>
-          <p className="mb-4">
+          <p className="mb-6">
             <span className="font-semibold">Cost:</span> ₹5,000
           </p>
 
-          <h3 className="text-xl font-semibold mb-3">Syllabus</h3>
+          <h3 className="text-xl font-semibold mb-5">Syllabus</h3>
 
           <div className="max-h-[400px] overflow-y-scroll pr-2 text-sm leading-relaxed space-y-6">
             <div>
@@ -131,7 +131,7 @@ const C = () => {
             href={`https://wa.me/${whatsappNumber}?text=${sampleMessage}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 block text-center bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-4 rounded transition"
+            className="mt-6 inline-block text-center bg-green-600 hover:bg-green-500 text-white font-semibold py-2 px-6 rounded transition"
           >
             Enroll Now
           </a>

@@ -135,14 +135,14 @@ const Blogs = () => {
   }, []);
 
   return (
-    <div className="relative w-full bg-gradient-to-b from-black via-zinc-900 to-black py-10 overflow-hidden">
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center drop-shadow-lg">
+    <div className="relative w-full bg-white py-10 overflow-hidden">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center drop-shadow-lg">
         Latest Tech Blogs
       </h2>
       <div className="relative">
         {/* Fade overlays for edge effect */}
-        <div className="pointer-events-none absolute z-20 top-0 left-0 h-full w-16 bg-gradient-to-r from-black to-transparent" />
-        <div className="pointer-events-none absolute z-20 top-0 right-0 h-full w-16 bg-gradient-to-l from-black to-transparent" />
+        <div className="pointer-events-none absolute z-20 top-0 left-0 h-full w-16 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute z-20 top-0 right-0 h-full w-16 bg-gradient-to-l from-white to-transparent" />
         {/* Actual animated slider */}
         <div
           ref={sliderRef}
@@ -163,7 +163,7 @@ const Blogs = () => {
                 <a
                   href={blog.url}
                   key={idx}
-                  className="group bg-gradient-to-tr from-zinc-900 to-zinc-800 shadow-xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105"
+                  className="group bg-gray-100 shadow-xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105"
                 >
                   <div className="relative">
                     <img
@@ -171,13 +171,13 @@ const Blogs = () => {
                       alt={blog.title}
                       className="w-full h-44 object-cover transition-opacity duration-300 group-hover:opacity-80"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-100" />
                   </div>
                   <div className="p-5">
-                    <h3 className="text-lg md:text-xl text-white font-semibold mb-1 group-hover:text-cyan-400 transition-colors duration-200">
+                    <h3 className="text-lg md:text-xl text-gray-800 font-semibold mb-1 group-hover:text-blue-500 transition-colors duration-200">
                       {blog.title}
                     </h3>
-                    <p className="text-gray-300 text-sm">{blog.summary}</p>
+                    <p className="text-gray-600 text-sm">{blog.summary}</p>
                   </div>
                 </a>
               ))}

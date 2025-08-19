@@ -105,30 +105,30 @@ function App() {
 
 
       {/* Courses Pages */}
-      <Route path="/courses/1" element={<DotNet/>}/>
-      <Route path="/courses/2" element={<JFS/>}/>
-      <Route path="/courses/3" element={<MEAN/>}/>
-      <Route path="/courses/4" element={<MERN/>}/>
-      <Route path="/courses/5" element={<PFS/>}/>
-      <Route path="/courses/6" element={<PhpFS/>}/>
-      <Route path="/courses/7" element={<DsMl/>}/>
-      <Route path="/courses/8" element={<CsEh/>}/>
-      <Route path="/courses/9" element={<WebDes/>}/>
-      <Route path="/courses/10" element={<Mongo/>}/>
-      <Route path="/courses/11" element={<ReactD/>}/>
-      <Route path="/courses/12" element={<AI/>}/>
-      <Route path="/courses/13" element={<CSharp/>}/>
-      <Route path="/courses/14" element={<CompHard/>}/>
-      <Route path="/courses/15" element={<JavaScript/>}/>
-      <Route path="/courses/16" element={<NodeD/>}/>
-      <Route path="/courses/17" element={<Python/>}/>
-      <Route path="/courses/18" element={<Angular/>}/>
-      <Route path="/courses/19" element={<C/>}/>
-      <Route path="/courses/20" element={<CPP/>}/>
-      <Route path="/courses/21" element={<DataSci/>}/>
-      <Route path="/courses/22" element={<EthiHack/>}/>
-      <Route path="/courses/23" element={<Sql/>}/>
-      <Route path="/courses/24" element={<Java/>}/>
+      <Route path="/courses/dot-net-full-stack-development" element={<DotNet/>}/>
+      <Route path="/courses/java-full-stack-development" element={<JFS/>}/>
+      <Route path="/courses/mean-stack" element={<MEAN/>}/>
+      <Route path="/courses/mern-stack" element={<MERN/>}/>
+      <Route path="/courses/python-full-stack-development" element={<PFS/>}/>
+      <Route path="/courses/php-full-stack-development" element={<PhpFS/>}/>
+      <Route path="/courses/data-science-and-machine-learning" element={<DsMl/>}/>
+      <Route path="/courses/cyber-security-and-ethical-hacking" element={<CsEh/>}/>
+      <Route path="/courses/web-design" element={<WebDes/>}/>
+      <Route path="/courses/mongo-db" element={<Mongo/>}/>
+      <Route path="/courses/react-development" element={<ReactD/>}/>
+      <Route path="/courses/artificial-intelligence" element={<AI/>}/>
+      <Route path="/courses/c-sharp-full-stack-development" element={<CSharp/>}/>
+      <Route path="/courses/computer-hardware" element={<CompHard/>}/>
+      <Route path="/courses/javascript" element={<JavaScript/>}/>
+      <Route path="/courses/nodejs" element={<NodeD/>}/>
+      <Route path="/courses/python" element={<Python/>}/>
+      <Route path="/courses/angular" element={<Angular/>}/>
+      <Route path="/courses/c" element={<C/>}/>
+      <Route path="/courses/c-plus-plus" element={<CPP/>}/>
+      <Route path="/courses/data-science" element={<DataSci/>}/>
+      <Route path="/courses/ethical-hacking" element={<EthiHack/>}/>
+      <Route path="/courses/sql" element={<Sql/>}/>
+      <Route path="/courses/java" element={<Java/>}/>
 
 
       

@@ -5,11 +5,11 @@ const WEBGPU_IMAGE =
 
 const CSSBlog = () => {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-12">
-      <div className="max-w-xl w-full">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+      <div className="max-w-7xl w-full">
         <div
-          className="group bg-gradient-to-br from-gray-800/90 to-gray-900/80 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden border border-gray-700 
-          transform transition-all duration-300 hover:scale-105 hover:shadow-blue-600/30"
+          className="group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl overflow-hidden border border-blue-100 
+          transform transition-all duration-300 hover:scale-105 hover:shadow-blue-200/30"
         >
           {/* Blog Image */}
           <div className="h-60 md:h-72 overflow-hidden">
@@ -22,8 +22,8 @@ const CSSBlog = () => {
           </div>
           {/* Blog Content */}
           <div className="p-7 md:p-10">
-            <h2 className="text-3xl font-bold text-white mb-4">The Promise of State of CSS 2025: A New Era in State of CSS 2025</h2>
-            <p className="text-gray-200 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">The Promise of State of CSS 2025: A New Era in State of CSS 2025</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
               The world of CSS has never been more powerful, expressive, and efficient than it is in 2025. What once started as a simple styling language has evolved into a robust design engine for modern web applications.
 
               Whether you’re a frontend pro or just entering the field, here’s everything you need to know about CSS in 2025 — the trends, tools, and features shaping the web.

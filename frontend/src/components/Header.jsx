@@ -3,50 +3,67 @@ import {
   FaLinkedinIn,
   FaBars,
   FaPhone,
-} from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+  FaFacebookF,
+} from "react-icons/fa";
+import { MdEmail, MdPhone, MdAccessTime, MdLocationOn } from "react-icons/md";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // --- Updated navItems array --- //
 const navItems = [
-  { name: 'ABOUT', link: '/about' },
+  { name: "ABOUT", link: "/about" },
   {
-    name: 'SERVICES',
+    name: "SERVICES",
     submenu: [
       {
-        category: 'Customized Web & Mobile Application',
+        category: "Customized Web & Mobile Application",
         items: [
-          { label: 'Web Application Development', link: '/services/web-app' },
-          { label: 'Database Design & Development', link: '/services/database' },
-          { label: 'E-Commerce Solutions', link: '/services/ecommerce' },
-          { label: 'Content Management Systems', link: '/services/cms' },
-          { label: 'Mobile Application Development', link: '/services/mobile-app' },
-          { label: 'Maintenance & Support Services', link: '/services/support' },
-          { label: 'Android App Development', link: '/services/android' },
-          { label: 'IOS/IPhone App Development', link: '/services/ios' },
+          { label: "Web Application Development", link: "/services/web-app" },
+          {
+            label: "Database Design & Development",
+            link: "/services/database",
+          },
+          { label: "E-Commerce Solutions", link: "/services/ecommerce" },
+          { label: "Content Management Systems", link: "/services/cms" },
+          {
+            label: "Mobile Application Development",
+            link: "/services/mobile-app",
+          },
+          {
+            label: "Maintenance & Support Services",
+            link: "/services/support",
+          },
+          { label: "Android App Development", link: "/services/android" },
+          { label: "IOS/IPhone App Development", link: "/services/ios" },
         ],
       },
       {
-        category: 'Cloud & VPS Hosting Solutions',
+        category: "Cloud & VPS Hosting Solutions",
         items: [
-          { label: 'Shared Hosting Solution', link: '/services/shared-hosting' },
-          { label: 'VPS Server/Hosting Solution', link: '/services/vps-hosting' },
-          { label: 'Cloud Server Solutions', link: '/services/cloud' },
-          { label: 'AWS/Azure Solutions', link: '/services/aws-azure' },
-          { label: 'IVR Solution', link: '/services/ivr' },
+          {
+            label: "Shared Hosting Solution",
+            link: "/services/shared-hosting",
+          },
+          {
+            label: "VPS Server/Hosting Solution",
+            link: "/services/vps-hosting",
+          },
+          { label: "Cloud Server Solutions", link: "/services/cloud" },
+          { label: "AWS/Azure Solutions", link: "/services/aws-azure" },
+          { label: "IVR Solution", link: "/services/ivr" },
         ],
       },
     ],
   },
 
   // ---- COURSES inserted here ---- //
-  { name: 'COURSES', link: '/courses' },
+  { name: "COURSES", link: "/courses" },
 
-  { name: 'INDUSTRIES', link: '/industries' },
-  { name: 'CAREERS', link: '/career' },
-  { name: 'BLOG', link: '/blog' },
-  { name: 'CONTACT US', link: '/contact' },
+  { name: "INDUSTRIES", link: "/industries" },
+  { name: "CAREERS", link: "/career" },
+  { name: "BLOG", link: "/blog" },
+  { name: "CONTACT US", link: "/contact" },
+  { name: "Already a student", link: "#" },
 ];
 
 const Header = () => {
@@ -54,205 +71,213 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
-  const linkedInUrl = 'https://www.linkedin.com/in/nca-it-solution-aa3515375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app';
-  const instagramUrl = 'https://www.instagram.com/ncaitsolution_noida?igsh=ODgxY2lqa2JtYmN1';
-
+  const linkedInUrl =
+    "https://www.linkedin.com/in/nca-it-solution-aa3515375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app";
+  const instagramUrl =
+    "https://www.instagram.com/ncaitsolution_noida?igsh=ODgxY2lqa2JtYmN1";
+  const facebookUrl =
+    "https://www.facebook.com/people/NCAIT/61567201709977/?mibextid=qi2Omg&rdid=dlP3DA3Tbl6jdAYu&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15Bh5t4DU6%2F%3Fmibextid%3Dqi2Omg";
+  const justDialUrl =
+    "https://www.justdial.com/Noida/Nca-It-Solution-Ai-Training-Institute-Noida-Near-Metro-Electronic-City-Noida-Sector-62/011PXX11-XX11-240812093602-I2K6_BZDET?trkid=&term=&ncatid=11294974&area=&search=Showing%20Results%20for%20%22Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062%22%20in%20Noida&mncatname=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&ftterm=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&abd_btn=&abd_heading=&isFreetxt=1&bd=2&cat_b2b_flag=&searchfrom=lst&thumbnail=";
   return (
-    <header className="bg-black text-white w-full shadow-md z-50">
-      <div className="w-[85%] max-w-[1600px] mx-auto px-5 pt-5 pb-2">
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-          {/* Logo + Hamburger */}
-          <div className="flex items-start justify-between w-full lg:w-auto">
-            <Link to="/" className="block">
-              <div className="flex items-center space-x-4">
-                <img src="../../Public/img/logo.png" alt="logo" className="w-20 h-20" />
-                <h1 className="text-xl lg:text-3xl font-bold">NCA IT SOLUTION</h1>
-              </div>
-            </Link>
-
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => {
-                setMobileMenuOpen((prev) => !prev);
-                setMobileServicesOpen(false);
-              }}
-              className="lg:hidden text-2xl text-white"
-              aria-label="Toggle menu"
-            >
-              <FaBars />
-            </button>
+   <header className="bg-white text-gray-900 w-full shadow-md z-50">
+  <div className="w-[92%] max-w-[1600px] mx-auto py-3">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+      {/* Logo + Hamburger */}
+      <div className="flex items-center justify-between w-full lg:w-auto">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="../../Public/img/logo.png"
+            alt="logo"
+            className="w-14 h-14 lg:w-16 lg:h-16 object-contain"
+          />
+          <div>
+            <h1 className="text-xl lg:text-2xl font-bold leading-tight">
+              NCA IT SOLUTION
+            </h1>
+            <span className="block text-sm lg:text-sm  text-indigo-900 font-medium">
+              Artificial Intelligence Based Training
+            </span>
           </div>
+        </Link>
 
-          {/* Desktop Contact + Nav */}
-          <div className="hidden lg:flex flex-col items-end w-full max-w-[70%]">
-            <div className="flex items-center justify-end flex-wrap gap-x-4 text-sm mb-1">
-              <MdEmail className="text-red-400" />
-              <span>ncaitsolution90@gmail.com</span>
-              <span>+91 8287584509</span>
-              <div className="flex gap-4 text-red-400 text-xl ml-4">
-                <a
-                  href={linkedInUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="hover:text-blue-500 transition-colors"
-                >
-                  <FaLinkedinIn className="cursor-pointer" />
-                </a>
-                <a
-                  href={instagramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="hover:text-pink-500 transition-colors"
-                >
-                  <FaInstagram className="cursor-pointer" />
-                </a>
-              </div>
-            </div>
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => {
+            setMobileMenuOpen((prev) => !prev);
+            setMobileServicesOpen(false);
+          }}
+          className="lg:hidden text-2xl text-gray-700"
+          aria-label="Toggle menu"
+        >
+          <FaBars />
+        </button>
+      </div>
 
-            {/* Nav */}
-            <ul className="flex gap-6 text-base font-semibold justify-end flex-wrap">
-              {navItems.map((item, idx) => (
-                <li
-                  key={idx}
-                  className="relative group"
-                  onMouseEnter={() =>
-                    item.name === 'SERVICES' && setDesktopServicesOpen(true)
-                  }
-                  onMouseLeave={() =>
-                    item.name === 'SERVICES' && setDesktopServicesOpen(false)
-                  }
-                >
-                  {/* If item has a link, Link to it. If not, render as button etc. */}
-                  {"submenu" in item ? (
-                    <>
-                      <Link to={item.link || "#"} className="hover:text-red-400">
-                        {item.name}
-                      </Link>
-                      {/* Desktop SERVICES Dropdown */}
-                      {item.name === 'SERVICES' && desktopServicesOpen && (
-                        <div className="absolute left-0 top-full bg-gray-900 shadow-xl z-50 w-screen max-w-xl grid grid-cols-1 md:grid-cols-2 p-6 gap-6 text-sm">
-                          {item.submenu.map((section, sIdx) => (
-                            <div key={sIdx}>
-                              <h4 className="font-semibold text-blue-300 mb-2">
-                                {section.category}
-                              </h4>
-                              <ul className="space-y-1 text-gray-200">
-                                {section.items.map((subItem, i) => (
-                                  <li key={i}>
-                                    <Link
-                                      to={subItem.link}
-                                      className="hover:underline cursor-pointer truncate"
-                                    >
-                                      {subItem.label}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </>
-                  ) : (
-                    <Link to={item.link} className="hover:text-red-400">
-                      {item.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Mobile Contact Row */}
-        <div className="lg:hidden mt-4 flex justify-between items-center text-red-400 text-xl">
-          <div className="flex gap-4">
-            <MdEmail title="Email" />
-            <FaPhone title="Phone" />
-          </div>
-          <div className="flex gap-3">
-            <a
-              href={linkedInUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="hover:text-blue-500 transition-colors"
-            >
-              <FaLinkedinIn className="cursor-pointer" />
+      {/* Desktop Contact + Nav */}
+      <div className="hidden lg:flex flex-col items-end w-full max-w-[75%]">
+        {/* Contact Row */}
+        <div className="flex items-center justify-end gap-x-6 text-[15px] font-medium mb-2">
+          <span className="flex items-center text-gray-700">
+            <MdPhone className="text-green-500 mr-1.5" /> +91 8287584509
+          </span>
+          <span className="flex items-center bg-indigo-50 px-3 py-1 rounded-full text-indigo-600 font-semibold shadow-sm">
+            <MdAccessTime className="mr-1.5" /> 8AM - 8PM
+          </span>
+          <div className="flex gap-3 text-lg ml-2">
+            <a href={linkedInUrl} target="_blank" rel="noreferrer" className="hover:text-blue-600 transition">
+              <FaLinkedinIn />
             </a>
-            <a
-              href={instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="hover:text-pink-500 transition-colors"
-            >
-              <FaInstagram className="cursor-pointer" />
+            <a href={instagramUrl} target="_blank" rel="noreferrer" className="hover:text-pink-500 transition">
+              <FaInstagram />
+            </a>
+            <a href={facebookUrl} target="_blank" rel="noreferrer" className="hover:text-blue-700 transition">
+              <FaFacebookF />
+            </a>
+            <a href={justDialUrl} target="_blank" rel="noreferrer" className="hover:text-orange-500 font-semibold tracking-wide transition">
+              JustDial
             </a>
           </div>
         </div>
 
-        {/* Mobile Nav */}
-        {mobileMenuOpen && (
-          <ul className="lg:hidden mt-4 bg-gray-800 rounded-md p-4 space-y-2 text-sm">
-            {navItems.map((item, idx) => (
-              <li key={idx}>
-                {item.name === 'SERVICES' ? (
-                  <>
-                    <button
-                      className="w-full text-left font-medium hover:text-red-400 flex items-center justify-between"
-                      onClick={() => setMobileServicesOpen((prev) => !prev)}
-                    >
-                      {item.name}
-                      <span className="ml-2">
-                        {mobileServicesOpen ? '▲' : '▼'}
-                      </span>
-                    </button>
-                    {/* Mobile SERVICES Dropdown */}
-                    {mobileServicesOpen && (
-                      <div className="mt-2 ml-2 bg-gray-700 rounded-md p-3 space-y-3">
-                        {item.submenu.map((section, sIdx) => (
-                          <div key={sIdx}>
-                            <h4 className="text-blue-300 font-semibold mb-1">
-                              {section.category}
-                            </h4>
-                            <ul className="text-gray-200 space-y-1">
-                              {section.items.map((subItem, i) => (
-                                <li key={i}>
-                                  <Link
-                                    to={subItem.link}
-                                    className="hover:underline cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                  >
-                                    {subItem.label}
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
+        {/* Address */}
+        <div className="flex items-center justify-end gap-2 text-sm text-gray-600 max-w-[80%] text-right leading-snug mb-2">
+          <MdLocationOn className="text-red-500" />
+          <span className="font-medium">
+            Iconic Corenthum Tower, Floor 7, Office 705 A, Electronic City Metro Station, Noida Sector 62
+          </span>
+        </div>
+
+        {/* Navigation */}
+        <ul className="flex gap-4 text-[16px] font-semibold justify-end flex-wrap bg-gray-50 py-2 px-5 rounded-xl shadow-sm border border-gray-200">
+          {navItems.map((item, idx) => (
+            <li
+              key={idx}
+              className="relative group"
+              onMouseEnter={() => item.name === "SERVICES" && setDesktopServicesOpen(true)}
+              onMouseLeave={() => item.name === "SERVICES" && setDesktopServicesOpen(false)}
+            >
+              {"submenu" in item ? (
+                <>
                   <Link
-                    to={item.link}
-                    className="block font-medium hover:text-red-400"
-                    onClick={() => setMobileMenuOpen(false)}
+                    to={item.link || "#"}
+                    className="px-3 py-1.5 rounded-md transition hover:bg-gray-200 hover:text-red-500"
                   >
                     {item.name}
                   </Link>
-                )}
-              </li>
-            ))}
-          </ul>
-        )}
+
+                  {/* Dropdown */}
+                  {item.name === "SERVICES" && desktopServicesOpen && (
+                    <div className="absolute left-0 top-full mt-2 bg-white shadow-xl border border-gray-200 z-50 w-screen max-w-3xl grid grid-cols-1 md:grid-cols-2 p-6 gap-6 text-sm rounded-lg">
+                      {item.submenu.map((section, sIdx) => (
+                        <div key={sIdx}>
+                          <h4 className="font-semibold text-blue-600 mb-2 uppercase tracking-wide text-xs">
+                            {section.category}
+                          </h4>
+                          <ul className="space-y-1.5 text-gray-700">
+                            {section.items.map((subItem, i) => (
+                              <li key={i}>
+                                <Link
+                                  to={subItem.link}
+                                  className="hover:text-red-500 hover:underline transition truncate"
+                                >
+                                  {subItem.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={item.link}
+                  className="px-3 py-1.5 rounded-md transition hover:bg-gray-200 hover:text-red-500"
+                >
+                  {item.name}
+                </Link>
+              )}
+            </li>
+          ))}
+        </ul>
       </div>
-    </header>
+    </div>
+
+    {/* Mobile Contact Row */}
+    <div className="lg:hidden mt-3 flex justify-between items-center text-gray-600 text-lg">
+      <div className="flex gap-4">
+        <MdEmail title="Email" />
+        <FaPhone title="Phone" />
+      </div>
+      <div className="flex gap-3">
+        <a href={linkedInUrl} target="_blank" rel="noreferrer" className="hover:text-blue-500 transition">
+          <FaLinkedinIn />
+        </a>
+        <a href={instagramUrl} target="_blank" rel="noreferrer" className="hover:text-pink-500 transition">
+          <FaInstagram />
+        </a>
+      </div>
+    </div>
+
+    {/* Mobile Nav */}
+    {mobileMenuOpen && (
+      <ul className="lg:hidden mt-3 bg-gray-50 rounded-lg p-3 space-y-2 shadow border border-gray-200">
+        {navItems.map((item, idx) => (
+          <li key={idx}>
+            {item.name === "SERVICES" ? (
+              <>
+                <button
+                  className="w-full text-left font-medium flex items-center justify-between hover:text-red-500"
+                  onClick={() => setMobileServicesOpen((prev) => !prev)}
+                >
+                  {item.name}
+                  <span className="text-sm">{mobileServicesOpen ? "▲" : "▼"}</span>
+                </button>
+                {mobileServicesOpen && (
+                  <div className="mt-2 ml-2 bg-gray-100 rounded-md p-3 space-y-2">
+                    {item.submenu.map((section, sIdx) => (
+                      <div key={sIdx}>
+                        <h4 className="text-blue-500 font-semibold mb-1 text-xs">
+                          {section.category}
+                        </h4>
+                        <ul className="space-y-1 text-gray-700">
+                          {section.items.map((subItem, i) => (
+                            <li key={i}>
+                              <Link
+                                to={subItem.link}
+                                className="hover:underline hover:text-red-500 transition"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {subItem.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link
+                to={item.link}
+                className="block font-medium hover:text-red-500"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            )}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</header>
+
+
   );
 };
-
 
 export default Header;

@@ -5,17 +5,17 @@ const Mongo = () => {
   const sampleMessage = encodeURIComponent("Hi, I'm interested in the MongoDB Development course. Please share the details!");
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center py-10 px-4">
-      <div className="bg-gray-900 rounded-lg shadow-xl max-w-3xl w-full overflow-hidden">
+  <div className="min-h-screen bg-white flex items-center justify-center py-10 px-4">
+  <div className="bg-white border border-gray-200 rounded-lg shadow-xl max-w-7xl w-full overflow-hidden">
         {/* Image Banner */}
         <img
           src="https://cdn.iconscout.com/icon/free/png-256/mongodb-4-1175139.png"
           alt="MongoDB Course"
-          className="w-full h-64 object-contain bg-gray-800 p-6"
+          className="w-full h-64 object-contain bg-gray-100 p-6"
         />
 
         {/* Content */}
-        <div className="p-6 text-white">
+  <div className="p-6 text-gray-900">
           <h2 className="text-3xl font-bold mb-4">MongoDB Development Course</h2>
           <p className="mb-2"><span className="font-semibold">Duration:</span> 2–3 Months</p>
           <p className="mb-4"><span className="font-semibold">Cost:</span> ₹10,000</p>

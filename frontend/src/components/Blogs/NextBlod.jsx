@@ -5,11 +5,11 @@ const WEBGPU_IMAGE =
 
 const NextBlog = () => {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-12">
-      <div className="max-w-xl w-full">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4 py-12">
+      <div className="max-w-7xl w-full">
         <div
-          className="group bg-gradient-to-br from-gray-800/90 to-gray-900/80 rounded-2xl shadow-2xl backdrop-blur-xl overflow-hidden border border-gray-700 
-          transform transition-all duration-300 hover:scale-105 hover:shadow-blue-600/30"
+          className="group bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-2xl overflow-hidden border border-blue-100 
+          transform transition-all duration-300 hover:scale-105 hover:shadow-blue-200/30"
         >
           {/* Blog Image */}
           <div className="h-60 md:h-72 overflow-hidden">
@@ -22,8 +22,8 @@ const NextBlog = () => {
           </div>
           {/* Blog Content */}
           <div className="p-7 md:p-10">
-            <h2 className="text-3xl font-bold text-white mb-4">The Promise of Next.js 14 Released: A New Era in Next.js 14 Released</h2>
-            <p className="text-gray-200 text-lg leading-relaxed">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">The Promise of Next.js 14 Released: A New Era in Next.js 14 Released</h2>
+            <p className="text-gray-700 text-lg leading-relaxed">
               The Next.js 14 release is here — and it’s packed with performance boosts, DX improvements, and production-grade features that reinforce its position as the go-to React framework for building modern web applications.
 
               From faster builds to more powerful routing and intelligent caching, Next.js 14 is focused on speed, scale, and simplicity.
