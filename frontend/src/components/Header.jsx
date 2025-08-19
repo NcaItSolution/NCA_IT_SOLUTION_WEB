@@ -63,7 +63,7 @@ const navItems = [
   { name: "CAREERS", link: "/career" },
   { name: "BLOG", link: "/blog" },
   { name: "CONTACT US", link: "/contact" },
-  { name: "Already a student", link: "#" },
+  { name: "Already a student", link: "https://nca-it-solution-student-learning-portal.onrender.com" },
 ];
 
 const Header = () => {
