@@ -1,7 +1,6 @@
 
 import React, { useEffect, useRef } from "react";
-import Pankaj from '../../Public/img/Pankaj.jpg';
-import Jai from '../../Public/img/Jai.jpg';
+
 const aboutUsImage =
   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80";
 
@@ -20,23 +19,7 @@ const whyCards = [
   },
 ];
 
-const teamCards = [
-  {
-    name: "Jai Goyal",
-    role: "Lead Software Developer Engineer",
-    image: Jai,
-  },
-  {
-    name: "Pankaj Vishwakarma",
-    role: "Full-Stack Developer",
-    image: Pankaj,
-  },
-  {
-    name: "Ritesh Thakur",
-    role: "Project Manager",
-    image: "https://randomuser.me/api/portraits/men/36.jpg",
-  },
-];
+
 
 // Elegant Card with animation and glassmorphism
 const Card = ({ title, desc }) => (
