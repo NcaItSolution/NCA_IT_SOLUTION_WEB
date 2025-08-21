@@ -65,7 +65,7 @@ const navItems = [
   { name: "CERTIFICATE", link: "/certificate" },
   { name: "CONTACT US", link: "/contact" },
   {
-    name: "STUDENT PORTAL",
+    name: "STUDENT LOGIN",
     link: "https://nca-it-solution-student-learning-portal.onrender.com",
   },
 ];
