@@ -15,6 +15,18 @@ const CertificateSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	},
+	subject: {
+		type: String,
+		required: true
+	},
+	from: {
+		type: Date,
+		required: true
+	},
+	to: {
+		type: Date,
+		required: true
+	},
 	certificateFile: {
 		type: String,
 		default: null // Path to uploaded certificate file
