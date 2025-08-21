@@ -17,36 +17,36 @@ const courses = [
   {
     title: "Full Stack Development",
     duration: "4-6 Months",
-  img: "../Public/img/ncaitsolution7.jpg",
+  img: "/img/ncaitsolution7.jpg",
     desc: "Master React, Node.js, and MongoDB. Build real-world applications from scratch.",
   },
   {
     title: "Data Science & AI",
     duration: "3 Months",
-    img: "../Public/img/ncaitsolution8.jpg",
+    img: "/img/ncaitsolution8.jpg",
     desc: "Learn Python, ML, and AI. Work with real datasets and intelligent systems.",
   },
   {
     title: "Mobile App Development",
     duration: "4-6 Months",
-    img: "../Public/img/ncaitsolution9.jpg",
+    img: "/img/ncaitsolution9.jpg",
     desc: "Build cross-platform apps with React Native and Flutter.",
   },
 ];
 
 const heroSlides = [
   {
-    img: "../Public/img/ncaitsolution7.jpg",
+    img: "/img/ncaitsolution7.jpg",
     title: "Cyber Security And Ethical Hacking",
     desc: "Protect systems, networks and programs from digital attacks. Learn to secure the future.",
   },
   {
-    img: "../Public/img/ncaitsolution8.jpg",
+    img: "/img/ncaitsolution8.jpg",
     title: "Full Stack Web Development",
     desc: "Master frontend & backend: HTML, CSS, JS, React, Node.js & MongoDB.",
   },
   {
-    img: "../Public/img/ncaitsolution9.jpg",
+    img: "/img/ncaitsolution9.jpg",
     title: "Data Science & Analytics",
     desc: "Python, ML, statistics, Pandas, NumPy & Scikit-learn.",
   },

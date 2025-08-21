@@ -94,7 +94,7 @@ const Header = () => {
           <div className="flex items-center justify-between w-full lg:w-auto">
             <Link to="/" className="flex items-start gap-0">
               <img
-                src="../../Public/img/logo.png"
+                src="/img/logo.png"
                 alt="logo"
                 className="w-8 h-8 lg:w-16 lg:h-16 object-contain"
               />
