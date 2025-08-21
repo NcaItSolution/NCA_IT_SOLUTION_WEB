@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-50 to-blue-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-50 to-blue-50 px-4 mt-28">
       <section
         id="contact-section"
         className=" mt-8 mb-8 w-full max-w-7xl bg-white rounded-3xl shadow-xl p-8 sm:p-12 md:p-16"

@@ -6,7 +6,7 @@ const cmsImg =
   "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80";
 
 const ContentSol = () => (
-  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center">
+  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center mt-36">
     {/* Card 1: Image + Description */}
     <div
       className={`

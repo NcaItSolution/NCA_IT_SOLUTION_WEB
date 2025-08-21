@@ -6,7 +6,7 @@ const maintenanceImg =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzN-Am5cdYD_caufK-20gByYQU6ugsqtenlg&s";
 
 const Maintain = () => (
-  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center">
+  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center mt-36">
     {/* Card 1: Image + Description */}
     <div
       className={`

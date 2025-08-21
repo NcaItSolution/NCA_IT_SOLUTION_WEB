@@ -5,7 +5,7 @@ const webDevImg =
   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80";
 
 const WebD = () => (
-  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center">
+  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center mt-36">
     {/* Card 1: Image + Description */}
     <div
       className={`

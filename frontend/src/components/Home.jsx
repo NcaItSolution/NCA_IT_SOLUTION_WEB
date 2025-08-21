@@ -107,7 +107,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white min-h-screen mt-16">
+    <div className="bg-white min-h-screen mt-24">
       {/* Hero Carousel */}
      <Carousel
   autoPlay

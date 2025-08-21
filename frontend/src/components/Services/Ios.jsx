@@ -6,7 +6,7 @@ const iosDevImg =
   "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80";
 
 const Ios = () => (
-  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center">
+  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center mt-36">
     {/* Card 1: Image + Description */}
     <div
       className={`

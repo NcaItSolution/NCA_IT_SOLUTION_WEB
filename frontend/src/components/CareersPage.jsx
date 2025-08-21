@@ -144,7 +144,7 @@ export default function CareersPage() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen w-full px-4 py-12 relative">
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen w-full px-4 py-12 relative mt-28">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>

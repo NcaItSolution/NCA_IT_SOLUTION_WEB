@@ -6,7 +6,7 @@ const awsAzureImg =
   "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80";
 
 const AwsAzure = () => (
-  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center">
+  <div className="bg-white min-h-screen py-10 px-3 flex flex-col items-center mt-20">
     {/* Card 1: Image + Description */}
     <div
       className={`

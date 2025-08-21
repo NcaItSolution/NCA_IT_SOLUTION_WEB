@@ -94,7 +94,7 @@ const AutoScrollContainer = ({ children, speed = 0.7 }) => {
     };
   }, [speed]);
   return (
-    <div className="relative">
+    <div className="relative mt-24">
       <div
         ref={containerRef}
         className="flex space-x-8 overflow-x-hidden select-none cursor-default scrollbar-hide py-2 "
