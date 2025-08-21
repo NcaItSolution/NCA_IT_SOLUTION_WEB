@@ -158,7 +158,7 @@ const Certificate = () => {
     <div className="flex-1 bg-white p-8 rounded-lg shadow-md flex flex-col items-center justify-center text-center">
       <h2 className="text-2xl font-bold mb-4">Sample Certificate</h2>
       <img
-        src="../Public/img/certificate.png" // 👉 replace with your actual image path
+        src="/img/certificate.png" // 👉 replace with your actual image path
         alt="Sample Certificate"
         className="w-full h-auto max-h-[450px] object-contain rounded-lg shadow-md border"
       />
