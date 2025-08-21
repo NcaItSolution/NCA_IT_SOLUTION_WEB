@@ -14,7 +14,7 @@ const AdminDash = ({ onLogout }) => {
 		navigate('/');
 	};
 	return (
-		<div className="min-h-screen bg-gray-50 p-8 flex flex-col justify-between mt-20">
+		<div className="min-h-screen bg-gray-50 p-8 flex flex-col justify-between mt-32">
 			<div>
 				<h1 className="text-3xl font-bold mb-6">Admin Dashboard</h1>
 				<CreateCourse onCourseCreated={() => {}} />
