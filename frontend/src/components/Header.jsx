@@ -88,25 +88,26 @@ const Header = () => {
     "https://www.justdial.com/Noida/Nca-It-Solution-Ai-Training-Institute-Noida-Near-Metro-Electronic-City-Noida-Sector-62/011PXX11-XX11-240812093602-I2K6_BZDET?trkid=&term=&ncatid=11294974&area=&search=Showing%20Results%20for%20%22Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062%22%20in%20Noida&mncatname=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&ftterm=Nca%20It%20Solution%20Near%20Electronic%20City%20Metro%20Station%20Noida%20Sector%2062&abd_btn=&abd_heading=&isFreetxt=1&bd=2&cat_b2b_flag=&searchfrom=lst&thumbnail=";
   return (
     <header className="bg-white text-gray-900 w-full shadow-md z-50 fixed top-0 left-0">
-      <div className="w-[92%] max-w-[1600px] mx-auto py-3">
+      <div className="w-[95%] max-w-[1600px] mx-auto py-3">
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
           {/* Logo + Hamburger */}
           <div className="flex items-center justify-between w-full lg:w-auto">
-           <Link to="/" className="flex items-center gap-3">
-  <img
-    src="../../Public/img/logo.png"
-    alt="logo"
-    className="w-8 h-8 lg:w-16 lg:h-16 object-contain"
-  />
-  <div className="leading-tight">
-    <h1 className="text-lg lg:text-2xl font-bold tracking-wide whitespace-nowrap">
-      NCA IT SOLUTION
-    </h1>
-    <span className="text-sm lg:text-base text-indigo-900 font-medium whitespace-nowrap block">
-      AI Based Training 
-    </span>
-  </div>
-</Link>
+            <Link to="/" className="flex items-start gap-0">
+              <img
+                src="../../Public/img/logo.png"
+                alt="logo"
+                className="w-8 h-8 lg:w-16 lg:h-16 object-contain"
+              />
+              <div className="leading-tight ml-2">
+                <h1 className="text-lg lg:text-2xl font-bold tracking-wide whitespace-normal lg:whitespace-nowrap">
+                  NCA IT SOLUTION
+                </h1>
+
+                <span className="text-sm lg:text-base text-indigo-900 font-medium whitespace-nowrap block">
+                  Artificial Intelligence Based Training
+                </span>
+              </div>
+            </Link>
 
             {/* Mobile Hamburger */}
             <button
@@ -119,19 +120,19 @@ const Header = () => {
             >
               <FaBars />
             </button>
-            {/* Admin Login Button */}
-            <button
-              onClick={handleAdminLoginClick}
-              className="ml-4 px-4 py-2 bg-white text-white rounded-lg font-semibold  transition"
-            >
-              Admin Login
-            </button>
           </div>
 
           {/* Desktop Contact + Nav */}
           <div className="hidden lg:flex flex-col items-end w-full max-w-[75%]">
             {/* Contact Row */}
             <div className="flex items-center justify-end gap-x-6 text-[15px] font-medium mb-2">
+              {/* Admin Login Button */}
+              <button
+                onClick={handleAdminLoginClick}
+                className="ml-4 px-4 py-2 bg-white text-white rounded-lg font-semibold  transition"
+              >
+                Admin Login
+              </button>
               <span className="flex items-center text-gray-700">
                 <MdPhone className="text-green-500 mr-1.5" /> +91 8287584509
               </span>
@@ -184,7 +185,7 @@ const Header = () => {
             </div>
 
             {/* Navigation */}
-            <ul className="flex gap-4 text-[16px] font-semibold justify-end flex-wrap bg-gray-50 py-2 px-5 rounded-xl shadow-sm border border-gray-200">
+            <ul className="flex gap-2 text-[16px] font-semibold justify-end flex-wrap bg-gray-50 py-2 px-5 rounded-xl shadow-sm border border-gray-200">
               {navItems.map((item, idx) => (
                 <li
                   key={idx}
@@ -265,11 +266,20 @@ const Header = () => {
         </div>
 
         {/* Mobile Contact Row */}
-        <div className="lg:hidden mt-3 flex justify-between items-center text-gray-600 text-lg">
-          <div className="flex gap-4">
-            <MdEmail title="Email" />
-            <FaPhone title="Phone" />
-          </div>
+        <div className="lg:hidden mt-1 flex justify-between items-center text-gray-600 text-lg">
+          <div className="flex items-center gap-4">
+  <MdEmail title="Email" className="text-xl cursor-pointer" />
+  <FaPhone title="Phone" className="text-xl cursor-pointer" />
+
+  {/* Admin Login Button */}
+  <button
+    onClick={handleAdminLoginClick}
+    className="px-4 py-2 bg-white text-white rounded-lg font-semibold "
+  >
+    Admin Login
+  </button>
+</div>
+
           <div className="flex gap-3">
             <a
               href={linkedInUrl}
@@ -313,6 +323,7 @@ const Header = () => {
                             <h4 className="text-blue-500 font-semibold mb-1 text-xs">
                               {section.category}
                             </h4>
+
                             <ul className="space-y-1 text-gray-700">
                               {section.items.map((subItem, i) => (
                                 <li key={i}>

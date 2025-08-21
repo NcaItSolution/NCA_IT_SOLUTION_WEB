@@ -1,7 +1,7 @@
 // Script to generate a personalized certificate PDF from a template using pdf-lib
 
-const fs = require('fs');
-const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
+const fs = require("fs");
+const { PDFDocument, rgb, StandardFonts } = require("pdf-lib");
 
 /**
  * Generate a personalized certificate PDF
@@ -21,11 +21,11 @@ async function generateCertificatePdf(fields, templatePath, outputPath) {
   // Fonts
   const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
-  const fullName = fields.fullName || '';
-  const subject = fields.subject || '';
-  const from = fields.from || '';
-  const to = fields.to || '';
-  const type = fields.type || 'Internship';
+  const fullName = fields.fullName || "";
+  const subject = fields.subject || "";
+  const from = fields.from || "";
+  const to = fields.to || "";
+  const type = fields.type || "Internship";
 
   // ✅ Step 1: Clear the old middle placeholder text
   page.drawRectangle({
@@ -36,7 +36,6 @@ async function generateCertificatePdf(fields, templatePath, outputPath) {
     color: rgb(1, 1, 1), // white fill
   });
 
- 
   // ✅ Step 3: Add formatted certificate text (center aligned)
   const line1 = `We are happy to certify that`;
   const line2 = `${fullName}`;
@@ -56,6 +55,7 @@ async function generateCertificatePdf(fields, templatePath, outputPath) {
     y: height - 350,
     size: 24,
     font: boldFont,
+    margin:3,
     color: rgb(0, 0, 0),
   });
 
@@ -76,29 +76,45 @@ async function generateCertificatePdf(fields, templatePath, outputPath) {
   });
 
   // ✅ Step 4: Appreciation lines (draw each line separately to avoid encoding error)
-    let appreciation = `We deeply appreciate the hard work, dedication, and commitment you have shown 
+  let appreciation = `We deeply appreciate the hard work, dedication, and commitment you have shown 
   throughout this program. Your contributions, learning attitude, and passion for excellence 
   are commendable, and we are confident that the skills and knowledge you gained here will 
   significantly contribute to your future success.`;
-    appreciation = appreciation.replace(/\n/g, ' ');
+  appreciation = appreciation.replace(/\n/g, " ");
 
-// Max width settings
-const maxWidth = width - 200;   // left & right margin = 100px each
-const leftMargin = 100;
-let appreciationY = height - 500;
-const lineHeight = 22;
-const fontSize = 14;
+  // Max width settings
+  const maxWidth = width - 200; // left & right margin = 100px each
+  const leftMargin = 100;
+  let appreciationY = height - 500;
+  const lineHeight = 22;
+  const fontSize = 14;
 
-// Word wrapping logic
-const words = appreciation.split(" ");
-let currentLine = "";
+  // Word wrapping logic
+  const words = appreciation.split(" ");
+  let currentLine = "";
 
-for (let i = 0; i < words.length; i++) {
-  const testLine = currentLine + words[i] + " ";
-  const lineWidth = boldFont.widthOfTextAtSize(testLine, fontSize);
+  for (let i = 0; i < words.length; i++) {
+    const testLine = currentLine + words[i] + " ";
+    const lineWidth = boldFont.widthOfTextAtSize(testLine, fontSize);
 
-  if (lineWidth > maxWidth && currentLine !== "") {
-    // Draw current line
+    if (lineWidth > maxWidth && currentLine !== "") {
+      // Draw current line
+      page.drawText(currentLine.trim(), {
+        x: leftMargin,
+        y: appreciationY,
+        size: fontSize,
+        font: boldFont,
+        color: rgb(0, 0, 0),
+      });
+      currentLine = words[i] + " ";
+      appreciationY -= lineHeight;
+    } else {
+      currentLine = testLine;
+    }
+  }
+
+  // Draw last line
+  if (currentLine.trim() !== "") {
     page.drawText(currentLine.trim(), {
       x: leftMargin,
       y: appreciationY,
@@ -106,23 +122,7 @@ for (let i = 0; i < words.length; i++) {
       font: boldFont,
       color: rgb(0, 0, 0),
     });
-    currentLine = words[i] + " ";
-    appreciationY -= lineHeight;
-  } else {
-    currentLine = testLine;
   }
-}
-
-// Draw last line
-if (currentLine.trim() !== "") {
-  page.drawText(currentLine.trim(), {
-    x: leftMargin,
-    y: appreciationY,
-    size: fontSize,
-    font: boldFont,
-    color: rgb(0, 0, 0),
-  });
-}
 
   // Save the new PDF
   const pdfBytes = await pdfDoc.save();
